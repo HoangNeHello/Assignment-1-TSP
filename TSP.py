@@ -62,24 +62,24 @@ class TSP:
             parts = lines[i].split()
             if len(parts) < 3:
                 break
-            # some files may have integer or float coordinates
             # parts[0] is node id; ignore and trust order
             x = float(parts[1]); y = float(parts[2])
             coords.append((x, y))
             i += 1
 
-        # Optional DIMENSION check
+        # Debugging DIMENSION check
         dim_hdr = headers.get("DIMENSION")
         if dim_hdr is not None:
             try:
                 dim = int(dim_hdr)
-                if dim != len(coords):
-                    raise ValueError(f"DIMENSION={dim} but parsed {len(coords)} coordinates")
             except ValueError:
-                # some files use "DIMENSION : 52" (already handled) or "DIMENSION: 52"
-                pass
+                dim = None  # can't parse -> skip strict check
+            if dim is not None and dim != len(coords):
+                raise ValueError(f"DIMENSION={dim} but parsed {len(coords)} coordinates")
+            
+            return TSP(name=name, coords=coords, comment=comment)  # Parse the TSP
 
-        return TSP(name=name, coords=coords, comment=comment)
+
 
     # ---------- Distances ----------
     @staticmethod
