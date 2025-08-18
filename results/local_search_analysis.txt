@@ -1,1 +1,10 @@
-Across all 11 EUC_2D TSPLIB instances, 2-opt achieved the best (lowest) min and mean tour lengths in every case. Exchange (swap) consistently beat jump (insert) but still trailed 2-opt by a wide margin—especially on large instances (PCB442, PR2392, USA13509). Variance across 30 uniformly random starts was smaller for 2-opt, indicating more robust convergence to high-quality local minima. The main trade-off is runtime: 2-opt’s O(n²) neighborhood is costlier; limiting its search window and capping accepted moves kept the largest instances tractable with minor quality loss. Bottom line: use 2-opt as the baseline local search. Exchange can serve as a quick warm-start, but jump adds little benefit on these benchmarks.
+Across all 11 EUC_2D TSPLIB instances, 
+2-opt achieved the best (lowest) min and mean tour lengths in every case. 
+Exchange (swap) consistently beat jump (insert),
+but still trailed 2-opt by a wide margin—especially on large instances (PCB442, PR2392, USA13509). 
+Variance across 30 uniformly random starts was smaller for 2-opt, 
+indicating more robust convergence to high-quality local minima. 
+The main trade-off is runtime: 2-opt’s O(n²) neighborhood is costlier; 
+limiting its search window and capping accepted moves kept the largest instances tractable with minor quality loss. 
+Bottom line: use 2-opt as the baseline local search. 
+Exchange can serve as a quick warm-start, but jump adds little benefit on these benchmarks. 
