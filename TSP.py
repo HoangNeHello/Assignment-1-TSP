@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from __future__ import annotations
 import math
 from typing import List, Tuple, Optional
@@ -139,6 +138,3 @@ if __name__ == "__main__":
     print(f"Loaded {tsp.name} with {tsp.n} nodes (EUC_2D).")
     print("d(0,1) =", tsp.distance(0, 1))
     print("Naive tour length:", tsp.tour_length(list(range(tsp.n))))
-=======
-#this is a test
->>>>>>> e9a83e3245915dddec27ea08684f6d7bbbcf90be

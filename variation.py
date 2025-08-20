@@ -30,22 +30,42 @@ def reserved_mutation(tour: list[int]) -> list[int]:
 ### Crossovers operations
 
 
-def ordered_crossover(parent1: list[int], parent2: list[int]) -> list[int]:
+def ordered_crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int], list[int]]:
 # Ordered Crossover: Create a child by preserving the order of nodes from both parents.
     size = len(parent1)
     start, end = sorted(random.sample(range(size), 2))
-    child = [None] * size
+    child1 = [None] * size
+    child2 = [None] * size
     # Fill the child with the segment from parent1
-    child[start:end+1] = parent1[start:end+1]
+    child1[start:end+1] = parent1[start:end+1]
+    child2[start:end+1] = parent2[start:end+1]
     # Fill the remaining positions with nodes from parent2, preserving order
-    p2_filtered = [node for node in parent2 if node not in child]
+    p2_filtered = [node for node in parent2 if node not in child1]
     p2_index = 0
-    for i in range(size):
-        if child[i] is None:
-            while p2_index < len(p2_filtered) and (i < start or i > end):
-                child[i] = p2_filtered[p2_index]
-                p2_index += 1
-    return child
+    # for i in range(size):
+    #     if child[i] is None:
+    #         while p2_index < len(p2_filtered) and (i < start or i > end):
+    #             child[i] = p2_filtered[p2_index]
+    #             p2_index += 1
+    i = end + 1
+    while i != start:
+        i = i % size
+        if child1[i] is None:
+            child1[i] = p2_filtered[p2_index]
+            p2_index += 1
+        i += 1
+        i = i % size
+    p1_filtered = [node for node in parent1 if node not in child2]
+    p1_index = 0
+    i = end + 1
+    while i != start:
+        i = i % size
+        if child2[i] is None:
+            child2[i] = p1_filtered[p1_index]
+            p1_index += 1
+        i += 1
+        i = i % size
+    return child1, child2
 
 
 def pmx_crossover(parent1: list[int], parent2: list[int]) -> list[int]:

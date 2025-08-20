@@ -17,6 +17,8 @@ class Individual:
                 raise ValueError("Tour length must match number of cities")
             self.tour = list(tour)
 
+        random.shuffle(self.tour)
+
     def calulate_path_distance(self, path: List[int]) -> int:
         
         return self.tsp.tour_length(path)
@@ -35,6 +37,9 @@ class Individual:
                 best_path = current_path 
 
         return best_path, min_distance
+
+    def distance_helper(self) -> int:
+        return self.tsp.tour_length(self.tour)
 
     def __repr__(self) -> str:
         return f"Individual(tour={self.tour}, distance={self.calulate_path_distance(self.tour)})"         

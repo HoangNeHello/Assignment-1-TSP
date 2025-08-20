@@ -17,30 +17,64 @@ class Algorithm1:
     def __init__(self, popul: Population):
         self.popul = popul
 
-    # Test function for experimenting with generation structure
+    # Function for running genetic algorithm. algorithm_num defines which algorithm is run
     @classmethod
-    def testalgo(cls, starting_tsp: TSP, population_size: int, generations: int):
+    def genalgo(cls, algorithm_num: int, starting_tsp: TSP, population_size: int, generations: int):
         # Population Initialisation
         cls.popul = Population(starting_tsp, population_size) # RANDOMISATION OF INITIAL TOURS REQUIRED
 
+        distances: list[int]
+        mating_pool: list[tuple[Individual, int]]
+
         # Main Generation Loop
         for i in range(generations):
-            # Do Mutation/Crossover
-            for i in cls.popul.individuals:
-                i.tour = variation.insert_mutation(i.tour)
+            # Check which algorithm is selected
+            match algorithm_num:
+                case 1:
+                    # Select parents for mating pool with Proportional Selection based on Distance
+                    cls.popul.individuals.sort(key = Individual.distance_helper)
 
-            # Check Distances
-            for i in cls.popul.individuals:
-                print(i.calulate_path_distance(i.tour))
+                    # Shuffle mating pool
+                    # random.shuffle(cls.popul.individuals)
 
-            # Perform Selection
+                    # Perform Ordered Crossover on parents
+                    for j in range(0, len(cls.popul.individuals), 2):
+                        if j+1 < len(cls.popul.individuals):
+                            cls.popul.individuals[j].tour, cls.popul.individuals[j+1].tour = variation.ordered_crossover(cls.popul.individuals[j].tour, cls.popul.individuals[j+1].tour)
 
+                    # Perform Insert Mutation on children
+                    for i in cls.popul.individuals:
+                        i.tour = variation.insert_mutation(i.tour)
+
+                case 2:
+                    # Do Mutation
+                    for i in cls.popul.individuals:
+                        i.tour = variation.insert_mutation(i.tour)
+
+                    # Check Distances
+                    for i in cls.popul.individuals:
+                        print(i.calulate_path_distance(i.tour))
+
+                    # Perform Selection
+                    
+
+                    # Do Crossover with selected individuals
+                case 3:
+                    pass
+                
+                case _:
+                    print("ERROR: algorithm ", algorithm_num, " is invalid. Valid numbers are from 1-3")
+                    return
+
+        cls.popul.individuals.sort(key = Individual.distance_helper)
+        print(cls.popul.individuals[0])
+        return
 
 
 if __name__ == "__main__":
     import sys, os
-    if len(sys.argv) < 4:
-        print("Usage: python3 algorithms.py <path-to-tsplib-file.tsp> <population-size> <generation-num>")
+    if len(sys.argv) < 5:
+        print("Usage: python3 algorithms.py <path-to-tsplib-file.tsp> <algorithm-num> <population-size> <generation-num>")
         sys.exit(1)
 
     path = sys.argv[1]
@@ -53,8 +87,9 @@ if __name__ == "__main__":
     print("d(0,1) =", tsp.distance(0, 1))
     print("Naive tour length:", tsp.tour_length(list(range(tsp.n))))
 
-    pop_size = int(sys.argv[2])
-    gen_num = int(sys.argv[3])
+    alg_num = int(sys.argv[2])
+    pop_size = int(sys.argv[3])
+    gen_num = int(sys.argv[4])
 
     alg = Algorithm1
-    alg.testalgo(tsp, pop_size, gen_num)
+    alg.genalgo(alg_num, tsp, pop_size, gen_num)

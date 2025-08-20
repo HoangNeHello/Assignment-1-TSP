@@ -1,5 +1,7 @@
 ---------- ALGORITHM 1 ----------
-
+Simple Genetic Algorithm reproduction cycle with 1-point crossover replaced with ordered crossover, and 
+SGA mutation replaced with insert mutation. This adapts the SGA reproduction cycle to a problem represented 
+by permutations instead of bitstrings, and can be used as a comparison for other algorithms. 
 
 ---------- ALGORITHM 2----------
 
