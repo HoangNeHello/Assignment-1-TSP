@@ -15,7 +15,6 @@ def Fitness_proportional(population: list[Individual]) -> Individual:
 
     for i in reversed(population):
         count += j/Total_Fitness
-        print(count, pointer)
         if pointer < count:
             return i
         j += 1

@@ -34,6 +34,7 @@ class Algorithm1:
                     # Select parents for mating pool with Proportional Selection based on Distance
                     cls.popul.individuals.sort(key = Individual.distance_helper)
 
+                    mating_pool = [] * len(cls.popul.individuals)
                     for j in range(len(cls.popul.individuals)):
                         mating_pool.append(Selection.Fitness_proportional(cls.popul.individuals))
 
