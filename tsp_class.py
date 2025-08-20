@@ -19,7 +19,7 @@ class Individual:
 
     def calulate_path_distance(self, path: List[int]) -> int:
         
-        return self.tsp.tour_cost(path)
+        return self.tsp.tour_length(path)
 
     def brute_force_tour (self) -> tuple [list[int], int]:
         
