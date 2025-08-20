@@ -23,8 +23,8 @@ class Algorithm1:
         # Population Initialisation
         cls.popul = Population(starting_tsp, population_size) # RANDOMISATION OF INITIAL TOURS REQUIRED
 
-        distances: list[int]
-        mating_pool: list[tuple[Individual, int]]
+        mating_pool: list[Individual]
+        mating_pool = [] * len(cls.popul.individuals)
 
         # Main Generation Loop
         for i in range(generations):
@@ -34,17 +34,17 @@ class Algorithm1:
                     # Select parents for mating pool with Proportional Selection based on Distance
                     cls.popul.individuals.sort(key = Individual.distance_helper)
 
-                    # Shuffle mating pool
-                    # random.shuffle(cls.popul.individuals)
+                    for j in range(len(cls.popul.individuals)):
+                        mating_pool.append(Selection.Fitness_proportional(cls.popul.individuals))
 
                     # Perform Ordered Crossover on parents
-                    for j in range(0, len(cls.popul.individuals), 2):
-                        if j+1 < len(cls.popul.individuals):
-                            cls.popul.individuals[j].tour, cls.popul.individuals[j+1].tour = variation.ordered_crossover(cls.popul.individuals[j].tour, cls.popul.individuals[j+1].tour)
+                    for j in range(0, len(mating_pool), 2):
+                        if j+1 < len(mating_pool):
+                            cls.popul.individuals[j].tour, cls.popul.individuals[j+1].tour = variation.ordered_crossover(mating_pool[j].tour, mating_pool[j+1].tour)
 
                     # Perform Insert Mutation on children
-                    for i in cls.popul.individuals:
-                        i.tour = variation.insert_mutation(i.tour)
+                    for j in cls.popul.individuals:
+                        j.tour = variation.insert_mutation(j.tour)
 
                 case 2:
                     # Do Mutation

@@ -1,20 +1,26 @@
+from tsp_class import Individual, Population
 import random
 
-def Fitness_proportional (population):
+def Fitness_proportional(population: list[Individual]) -> Individual:
 
     Total_Fitness = 0.0
 
-    for i in population:
+    for i in range(len(population)):
         Total_Fitness += 1.0 / 1.0 + i
     
-    pointer = random.uniform(0.0, Total_Fitness)
+    pointer = random.uniform(0.0, 1.0)
     
     count = 0.0
+    j = 1
 
-    for i in population:
-        count += 1.0/1.0+Total_Fitness
-        if count >= pointer:
+    for i in reversed(population):
+        count += j/Total_Fitness
+        print(count, pointer)
+        if pointer < count:
             return i
+        j += 1
+
+    return population[0]
 
     
 
