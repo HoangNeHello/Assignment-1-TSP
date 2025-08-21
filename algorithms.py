@@ -6,7 +6,7 @@ import tsp_selection
 import Selection
 import random
 
-class Algorithm1:
+class Algorithm:
     """
     Representation of an Evolutionary Algorithm for solving the TSP
 
@@ -92,5 +92,5 @@ if __name__ == "__main__":
     pop_size = int(sys.argv[3])
     gen_num = int(sys.argv[4])
 
-    alg = Algorithm1
+    alg = Algorithm
     alg.genalgo(alg_num, tsp, pop_size, gen_num)
