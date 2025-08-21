@@ -1,4 +1,4 @@
-# robust_ea_test.py
+# test_class.py
 import random, statistics
 from TSP import TSP
 from tsp_class import Individual, Population
