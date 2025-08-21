@@ -5,14 +5,14 @@ def Fitness_proportional (population):
     Total_Fitness = 0.0
 
     for i in population:
-        Total_Fitness += 1.0 / 1.0 + i
+        Total_Fitness += 1.0 / (1.0 + i)
     
     pointer = random.uniform(0.0, Total_Fitness)
     
     count = 0.0
 
     for i in population:
-        count += 1.0/1.0+Total_Fitness
+        count += 1.0/(1.0+i)
         if count >= pointer:
             return i
 
