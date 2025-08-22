@@ -1,0 +1,43 @@
+============================================================
+Team Contributions
+============================================================
+
+Team Members
+- Hoang
+- Cynthia
+- Eileen
+- Jiahe
+- Markus
+- Liu
+
+Overview
+We designed and implemented a modular TSP library and experiments across seven exercises. Work was divided by exercise, with later reallocation due to capacity and availability. Exercises 1–5 are complete; Exercises 6–7 are in progress under the adjusted plan below.
+
+Contributions to Date
+- Hoang — Exercises 1 and 2
+  Implemented TSP.py (TSPLIB EUC_2D parsing, distance and tour utilities) and local_search.py (jump/insert, exchange/swap, and 2-opt with performance safeguards). Integrated results logging and analysis.
+- Cynthia — Exercise 3
+  Implemented tsp_class.py (Individual and Population: O(n) uniform random permutations, fitness evaluation) and validation tests.
+- Eileen — Exercise 4
+  Implemented mutation operators (insert, swap, inversion) and crossovers (Order, PMX, Cycle, Edge Recombination) in variation.py, plus permutation-safety tests.
+- Jiahe — Exercise 5
+  Implemented selection methods in tsp_selection.py (fitness-proportionate, tournament, elitism) and statistical sanity tests; improved robustness.
+- Markus — Exercise 6 (initial design)
+  Drafted evolutionary algorithm designs and benchmarking plan (population sizes, generation budgets, reporting format).
+- Liu — Exercise 7 (initial)
+  Began Inver-over operator study and baseline implementation plan from the referenced paper.
+
+Reallocation and Current Plan
+- Exercise 6 (evolutionary algorithm benchmarking): led by Jiahe, Cynthia, and Markus.
+  Finalize three EA variants, run grids with population sizes 20, 50, 100, 200 and generations 2000, 5000, 10000, 20000. Produce results/your_EA.txt and design rationale in doc/algorithm_design.txt.
+- Exercise 7 (Inver-over algorithm): led by Eileen and Liu.
+  Complete Inver-over implementation and 30-run benchmarks. Write results/inverover.txt and results/your_EA_inverover_comparison.txt.
+- Submission packaging: Hoang.
+  Maintain repository structure, verify outputs, and prepare doc/readme.txt.
+
+Quality and Reproducibility
+- Modules include basic tests and deterministic seeds where applicable.
+- Results are written under results/ with clear filenames as specified.
+- Code is organized to allow swapping of operators, selections, and local searches without changes to core types.
+
+(Request for Extension was accepted)
