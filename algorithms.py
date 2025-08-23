@@ -75,7 +75,12 @@ class Algorithm:
                     print(mating_pool)
 
                 case 3:
-                    pass
+                    indiv = cls.popul.individuals
+
+                    print(indiv[0].tour)
+                    print(indiv[1].tour)
+                    indiv[2].tour = variation.pmx_crossover(indiv[0].tour, indiv[1].tour)
+                    print(indiv[2].tour)
                 
                 case _:
                     print("ERROR: algorithm ", algorithm_num, " is invalid. Valid numbers are from 1-3")

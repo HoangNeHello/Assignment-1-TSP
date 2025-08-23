@@ -69,22 +69,31 @@ def ordered_crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int]
 
 
 def pmx_crossover(parent1: list[int], parent2: list[int]) -> list[int]:
+    print("started pmx crossover")
     # Partially Mapped Crossover (PMX): Create a child by mapping segments from both parents.
     size = len(parent1)
     start, end = sorted(random.sample(range(size), 2))
     child = [None] * size
     child[start:end+1] = parent1[start:end+1]
+    print(size, start, end, child)
     # Copy the segment from parent1
+    print("starting for loop 1")
     for i in range(start, end + 1):
         child[i] = parent1[i]
-    
+    print("ending for loop 1")
     # Fill the remaining positions with nodes from parent2, using mapping
+    print("starting for loop 2")
     for i in range(size):
+        print("for loop 2 loop num ", i)
         if child[i] is None:
             node = parent2[i]
             while node in child:
                 node = parent1[child.index(node)]
+                print(child)
             child[i] = node
+    print("ending for loop 2")
+    
+    print("ending pmx crossover")
     return child
 
 
