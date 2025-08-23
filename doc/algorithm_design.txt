@@ -6,6 +6,12 @@ by permutations instead of bitstrings, and can be used as a comparison for other
 ---------- ALGORITHM 2----------
 Small breeding pool selected by Elitism selection, then children bred to fill rest of population size 
 using Roulette selection of breeding pool. Children created by PMX crossover and subjected to 
-Inversion mutation.
+Inversion mutation. Keeping the elite parents from the previous generation is intended to ensure that each 
+iteration has a best individual that is at least as good as the previous generation, with mutations being the 
+primary mechanism to potentially create fitter individuals. Performing an elitism selection before breeding is 
+also intended to make sure that the average fitness of individuals increases with each generation, as crossover 
+operations tend to create results that are an average of the two parents, and performing an elitism selection 
+before crossover means that the average fitness of the children is between the top 20% of the initial population 
+instead of the total initial population.
 
 ---------- ALGORITHM 3 ----------

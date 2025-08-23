@@ -53,26 +53,24 @@ class Algorithm:
                     
                     mating_pool = [] * len(cls.popul.individuals)
                     mating_pool = tsp_selection.elitism(cls.popul.individuals)
-                    print(mating_pool)
                     
-                    # Breed based on Roulette Selection
+                    # Breed based on Roulette Selection and Mutate child
                     popul_size = len(cls.popul.individuals)
 
                     end = len(mating_pool)
                     j = len(mating_pool)
                     while len(mating_pool) < popul_size:
-                        print(j)
                         parenta = Selection.Fitness_proportional(mating_pool[:end])
-                        print("parenta assigned")
                         parentb = Selection.Fitness_proportional(mating_pool[:end])
-                        print("parentb assigned")
                         mating_pool.append(cls.popul.individuals[j])
-                        print("appended to mating_pool")
                         mating_pool[j].tour = variation.pmx_crossover(parenta.tour, parentb.tour)
-                        print("mating_pool tour overwritten")
+
+                        mating_pool[j].tour = variation.reserved_mutation(mating_pool[j].tour)
+
                         j += 1
 
-                    print(mating_pool)
+                    # Overwrite population with mating pool
+                    cls.popul.individuals = mating_pool
 
                 case 3:
                     indiv = cls.popul.individuals
