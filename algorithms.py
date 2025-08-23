@@ -48,18 +48,32 @@ class Algorithm:
                         j.tour = variation.insert_mutation(j.tour)
 
                 case 2:
-                    # Do Mutation
-                    for i in cls.popul.individuals:
-                        i.tour = variation.insert_mutation(i.tour)
-
-                    # Check Distances
-                    for i in cls.popul.individuals:
-                        print(i.calulate_path_distance(i.tour))
-
-                    # Perform Selection
+                    # Select breeding pool with Elitism Selection
+                    cls.popul.individuals.sort(key = Individual.distance_helper)
                     
+                    mating_pool = [] * len(cls.popul.individuals)
+                    mating_pool = tsp_selection.elitism(cls.popul.individuals)
+                    print(mating_pool)
+                    
+                    # Breed based on Roulette Selection
+                    popul_size = len(cls.popul.individuals)
 
-                    # Do Crossover with selected individuals
+                    end = len(mating_pool)
+                    j = len(mating_pool)
+                    while len(mating_pool) < popul_size:
+                        print(j)
+                        parenta = Selection.Fitness_proportional(mating_pool[:end])
+                        print("parenta assigned")
+                        parentb = Selection.Fitness_proportional(mating_pool[:end])
+                        print("parentb assigned")
+                        mating_pool.append(cls.popul.individuals[j])
+                        print("appended to mating_pool")
+                        mating_pool[j].tour = variation.pmx_crossover(parenta.tour, parentb.tour)
+                        print("mating_pool tour overwritten")
+                        j += 1
+
+                    print(mating_pool)
+
                 case 3:
                     pass
                 

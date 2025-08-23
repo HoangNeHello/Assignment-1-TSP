@@ -4,6 +4,8 @@ SGA mutation replaced with insert mutation. This adapts the SGA reproduction cyc
 by permutations instead of bitstrings, and can be used as a comparison for other algorithms. 
 
 ---------- ALGORITHM 2----------
-
+Small breeding pool selected by Elitism selection, then children bred to fill rest of population size 
+using Roulette selection of breeding pool. Children created by PMX crossover and subjected to 
+Inversion mutation.
 
 ---------- ALGORITHM 3 ----------

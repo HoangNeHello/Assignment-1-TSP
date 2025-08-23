@@ -19,7 +19,7 @@ def Fitness_proportional(population: list[Individual]) -> Individual:
             return i
         j += 1
 
-    return population[0]
+    return random.choice(population)
 
     
 

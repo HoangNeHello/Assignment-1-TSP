@@ -1,5 +1,6 @@
 import random
 from TSP import TSP 
+from tsp_class import Individual, Population
 
 def roulette_wheel_selection(population):
     # select an individual based on fitness proportionate selection
@@ -33,14 +34,15 @@ def tournament_selection(individuals, tournament_size=3):
     return best
 
 
-def elitism(population, fitness_scores, elite_fraction = 0.2):
+def elitism(population: list[Individual], elite_fraction = 0.2):
     # select the top elite faction of individuals based on fitness
     # lower fitness is better 
     
-    paired = list(zip(population, fitness_scores))
-    paired.sort(key=lambda x: x[1])
+    # paired = list(zip(population, fitness_scores))
+    # paired.sort(key=lambda x: x[1])
+    population.sort(key = Individual.distance_helper)
 
-    num_elites = max(1, int(len(paired) * elite_fraction))
-    elite_individuals = [ind for ind, score in paired[:num_elites]]
+    num_elites = max(1, int(len(population) * elite_fraction))
+    elite_individuals = population[:num_elites]
 
     return elite_individuals
