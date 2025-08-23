@@ -28,7 +28,7 @@ def tournament_selection(individuals, tournament_size=3):
 
     best = contenders[0]
     for ind in contenders[1:]:
-        if ind.fitness < best.fitness():
+        if ind.calulate_path_distance(ind.tour) < best.calulate_path_distance(best.tour):
             best = ind
 
     return best

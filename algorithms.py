@@ -73,12 +73,24 @@ class Algorithm:
                     cls.popul.individuals = mating_pool
 
                 case 3:
-                    indiv = cls.popul.individuals
+                    # Select parents for mating pool with Tournament Selection
+                    cls.popul.individuals.sort(key = Individual.distance_helper)
+                    print(cls.popul.individuals[0].calulate_path_distance(cls.popul.individuals[0].tour))
 
-                    print(indiv[0].tour)
-                    print(indiv[1].tour)
-                    indiv[2].tour = variation.pmx_crossover(indiv[0].tour, indiv[1].tour)
-                    print(indiv[2].tour)
+                    mating_pool = [] * len(cls.popul.individuals)
+                    for j in range(len(cls.popul.individuals) * 2):
+                        mating_pool.append(tsp_selection.tournament_selection(cls.popul.individuals))
+
+                    # Perform Edge Recombination Crossover on parents
+                    k = 0
+                    for j in range(0, len(mating_pool), 2):
+                        if j+1 < len(mating_pool):
+                            cls.popul.individuals[k].tour = variation.edge_recombination_crossover(mating_pool[j].tour, mating_pool[j+1].tour)
+                            k += 1
+
+                    # Perform Insert Mutation on children
+                    for j in cls.popul.individuals:
+                        j.tour = variation.insert_mutation(j.tour)
                 
                 case _:
                     print("ERROR: algorithm ", algorithm_num, " is invalid. Valid numbers are from 1-3")

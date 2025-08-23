@@ -15,3 +15,8 @@ before crossover means that the average fitness of the children is between the t
 instead of the total initial population.
 
 ---------- ALGORITHM 3 ----------
+Parents are selected for the mating pool by Tournament selection, with children created via Edge Recombination 
+crossover and mutated via Insert mutation. Edge Recombination conserves adjacency information from parents, which
+is important for the TSP as preserving short adjacent node segments ensures that good edge segments are maintained 
+for subsequent generations. Insert mutation also induces smaller mutations than other mutation methods, and is 
+therefore easier to manage.
