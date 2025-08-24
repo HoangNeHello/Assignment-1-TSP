@@ -20,9 +20,11 @@ def Fitness_proportional (population):
 
 def Tournament(population,k=5,p=0.8):
 
+    k = min(k, len(population))
+
     select = random.sample(population,k)
 
-    select.sort()
+    select.sort(key=lambda ind: ind["cost"])
 
     for i, j in enumerate(select):
         if random.random() < p or i == len(select) - 1:
@@ -31,7 +33,9 @@ def Tournament(population,k=5,p=0.8):
 
 def Elitism(population,size=1):
 
-    e_sort = sorted(population)
+    size = max(0, min(size, len(population)))
+
+    e_sort = sorted(population, key=lambda ind: ind["cost"])
 
     e = e_sort[:size]
 
