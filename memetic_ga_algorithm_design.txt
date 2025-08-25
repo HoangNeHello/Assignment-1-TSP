@@ -1,0 +1,3 @@
+Memetic Genetic Algorithm:
+
+This Memetic Genetic Algorithm combines global search and local optimization. The tournament chose to maintain the pressure of selection while avoiding premature convergence. Elitism passes down the best solutions from generation to generation. Edge recombination and cross respect adjacent information to generate effective trips. Mutation (insertion) ensures diversity. Finally, 2-opt local search optimizes the subgeneration path to accelerate the convergence towards high-quality solutions. This balance between exploration and development makes the design effective for TSP.
