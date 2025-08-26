@@ -1,0 +1,31 @@
+---------- ALGORITHM 1 ----------
+Simple Genetic Algorithm reproduction cycle with 1-point crossover replaced with ordered crossover, and 
+SGA mutation replaced with insert mutation. This adapts the SGA reproduction cycle to a problem represented 
+by permutations instead of bitstrings, and can be used as a comparison for other algorithms. 
+
+---------- ALGORITHM 2----------
+Small breeding pool selected by Elitism selection, then children bred to fill rest of population size 
+using Roulette selection of breeding pool. Children created by PMX crossover and subjected to 
+Inversion mutation. Keeping the elite parents from the previous generation is intended to ensure that each 
+iteration has a best individual that is at least as good as the previous generation, with mutations being the 
+primary mechanism to potentially create fitter individuals. Performing an elitism selection before breeding is 
+also intended to make sure that the average fitness of individuals increases with each generation, as crossover 
+operations tend to create results that are an average of the two parents, and performing an elitism selection 
+before crossover means that the average fitness of the children is between the top 20% of the initial population 
+instead of the total initial population.
+
+---------- ALGORITHM 3 ----------
+Parents are selected for the mating pool by Tournament selection, with children created via Edge Recombination 
+crossover and mutated via Insert mutation. Edge Recombination conserves adjacency information from parents, which
+is important for the TSP as preserving short adjacent node segments ensures that good edge segments are maintained 
+for subsequent generations. Insert mutation also induces smaller mutations than other mutation methods, and is 
+therefore easier to manage.
+
+---------- ALGORITHM 4 (out of algorithms.py's scope) ----------
+This Memetic Genetic Algorithm combines global search and local optimization. 
+The tournament chose to maintain the pressure of selection while avoiding premature convergence. 
+Elitism passes down the best solutions from generation to generation. 
+Edge recombination and cross respect adjacent information to generate effective trips. 
+Mutation (insertion) ensures diversity. 
+Finally, 2-opt local search optimizes the subgeneration path to accelerate the convergence towards high-quality solutions. 
+This balance between exploration and development makes the design effective for TSP.

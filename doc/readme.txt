@@ -21,7 +21,7 @@ Getting TSPLIB instances
 2) Download/place these files (exact names/case matter):
    eil51.tsp, eil76.tsp, eil101.tsp, st70.tsp,
    kroA100.tsp, kroC100.tsp, kroD100.tsp,
-   lin105.tsp, pcb442.tsp, pr2392.tsp, usa13509.tsp  (or .tsp.gz)
+   lin105.tsp, pcb442.tsp, pr2392.tsp, usa13509.tsp 
 
 3) If you only have .tsp.gz, decompress next to it:
    gunzip -k TSPLIB/usa13509.tsp.gz   # leaves .tsp in place
@@ -49,7 +49,7 @@ Useful flags:
    --max-improves N             (default: 20000, safety cap per run)
    --span2opt K                 (default: 80; 2-opt window size for speed on large n)
 
-Your 150-word summary goes in:
+150-word summary goes in:
    results/local_search_analysis.txt   (write manually based on the numbers)
 
 ------------------------------------------------------------
@@ -71,8 +71,8 @@ PY
 ------------------------------------------------------------
 Exercise 4 – Variation Operators (mutation/crossover)
 ------------------------------------------------------------
-Sanity tests for mutations (insert/swap/inversion) and crossovers (OX/PMX/CX/ERX):
-   python3 test_Eileen.py      # or your test_variation_ops.py if named differently
+Quick test for mutations (insert/swap/inversion) and crossovers (OX/PMX/CX/ERX):
+   python3 test_class.py    
 
 Notes:
 - OX keeps a slice from P1 and fills remaining in P2 order.
@@ -82,9 +82,7 @@ Notes:
 ------------------------------------------------------------
 Exercise 5 – Selection (roulette/tournament/elitism)
 ------------------------------------------------------------
-Tests (any of these, depending on your file names):
-   python3 test_Cynthia.py
-   python3 test_Jiahe.py
+Tests:
    python3 test_selection.py
 
 They sample selections repeatedly and check that
@@ -93,20 +91,41 @@ tournament ≤ roulette ≤ population mean (on average).
 ------------------------------------------------------------
 Exercise 6 – Evolutionary Algorithms & Benchmarking
 ------------------------------------------------------------
-We provide three EA designs (see doc/algorithm_design.txt).
-If you are using a script named ea.py (baseline GA):
-   python3 ea.py \
-     --instances eil51 eil76 eil101 st70 kroA100 kroC100 kroD100 lin105 pcb442 pr2392 usa13509 \
-     --pop 50 --gens 20000 --runs 30 \
-     --algo baseline --out results/your_EA.txt
+A) Three EA baselines (A1/A2/A3)
+---------------------------------
+We provide three baseline EAs in algorithms.py (see Algorithm.genalgo):
+  A1: Roulette (fitness-proportionate) + OX + insert mutation
+  A2: Elitism + PMX + inversion mutation
+  A3: Tournament + Edge Recombination + insert mutation
 
-Benchmark grid (as required):
-- Population sizes: 20, 50, 100, 200
-- Generations: 2000, 5000, 10000, 20000
-- For the “best” algorithm: pop=50, gens=20000, runs=30
-  → report mean and standard deviation per instance in results/your_EA.txt
+Run the full benchmarking grid (instances × pop sizes × generations):
+    python3 test_algorithms.py
 
-(If your EA script uses different flags, see its --help.)
+This runs population sizes {20, 50, 100, 200} at generations {2000, 5000, 10000, 20000}
+for each of the required instances and prints progress to the terminal. The script writes
+a summary file to:
+    results/algorithms_grid.txt
+
+B) “Best” algorithm: Memetic GA (recommended)
+---------------------------------------------
+We also provide a memetic GA (crossover + mutation + 2-opt local search) for the
+“best algorithm” requirement.
+
+Run 30 times per instance at pop=50 and gens=20000:
+   python3 memetic_ga.py --base TSPLIB \
+  --instances eil51 eil76 eil101 st70 kroA100 kroC100 kroD100 lin105 pcb442 pr2392 usa13509 \
+  --pop 50 --gens 20000 --runs 30 \
+  --out results/memetic_ga.txt
+
+This writes per-instance mean and standard deviation to:
+    results/memetic_ga.txt
+
+------------------------------------------------------------
+Exercise 7 – Inver-over Evolutionary Algorithm
+------------------------------------------------------------
+Smoke test:
+   python3 run_inverover_quick.py
+
 
 ------------------------------------------------------------
 Troubleshooting

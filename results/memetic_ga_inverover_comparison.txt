@@ -1,0 +1,5 @@
+Across overlapping TSPLIB instances, Inver-over gave lower average tour costs and tighter variance than our memetic GA. 
+Examples: eil76 541.57 vs 544.70; kroC100 20,768.63 vs 21,980; kroD100 21,369.87 vs 22,520 (means, 30 runs, pop=50, 20k gens). 
+ Settings confirmed in our scripts. 
+ The memetic report omitted PR2392 and USA13509 for runtime reasons, whereas Inver-over included them. 
+ Overall, Inver-over is better in solution quality; the memetic GA is competitive but slower due to local search.

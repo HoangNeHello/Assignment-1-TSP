@@ -11,7 +11,10 @@ Team Members
 - Liu
 
 Overview
-We designed and implemented a modular TSP library and experiments across seven exercises. Work was divided by exercise, with later reallocation due to capacity and availability. Exercises 1–5 are complete; Exercises 6–7 are in progress under the adjusted plan below.
+We designed and implemented a modular TSP library and experiments across seven exercises. 
+Work was divided by exercise, with later reallocation due to capacity and availability. 
+Exercises 1–5 are complete; Exercises 6–7 are in progress under the adjusted plan below. 
+(Request for Extension was accepted)
 
 Contributions to Date
 - Hoang — Exercises 1 and 2
@@ -35,9 +38,6 @@ Reallocation and Current Plan
 - Submission packaging: Hoang.
   Maintain repository structure, verify outputs, and prepare doc/readme.txt.
 
-Quality and Reproducibility
-- Modules include basic tests and deterministic seeds where applicable.
-- Results are written under results/ with clear filenames as specified.
-- Code is organized to allow swapping of operators, selections, and local searches without changes to core types.
-
-(Request for Extension was accepted)
+Communication Notes
+- Markus: Late start on Exercise 6 due to not checking group communications, which led to an Extension Request. (Refer to Extension.png)
+- Liu: Limited direct communication; updates are relayed via Eileen.

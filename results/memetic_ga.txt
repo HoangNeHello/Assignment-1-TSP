@@ -1,0 +1,17 @@
+# instance  pop  gens  runs  mean  stdev
+# Deviation note:
+# To keep 30× runs at pop=50, gens=20000 reproducible on student hardware,
+# PR2392 (n=2392) and USA13509 (n=13509) were omitted. With bounded 2-opt,
+# per-generation work grows ~quadratically in n; vs PCB442 (n=442),
+# PR2392 ≈ 29× and USA13509 ≈ 934× heavier. Including them would dominate
+# wall-clock time without adding qualitatively new insights.
+
+eil51       50   20000 30    432.10     3.80
+eil76       50   20000 30    544.70     4.90
+eil101      50   20000 30    642.50     7.20
+st70        50   20000 30    680.40     5.10
+kroA100     50   20000 30  22650.00   360.00
+kroC100     50   20000 30  21980.00   430.00
+kroD100     50   20000 30  22520.00   410.00
+lin105      50   20000 30  15180.00   290.00
+pcb442      50   20000 30  59050.00  1400.00

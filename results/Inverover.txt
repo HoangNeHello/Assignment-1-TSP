@@ -1,0 +1,331 @@
+>>> eil51.tsp (n=51) | resume from run 0/30
+[eil51.tsp] run  1/30 | best=   426 | mean=  426.00 std=  0.00 | t=  7.3s ETA=00:03:31
+[eil51.tsp] run  2/30 | best=   427 | mean=  426.50 std=  0.50 | t=  9.4s ETA=00:03:53
+[eil51.tsp] run  3/30 | best=   426 | mean=  426.33 std=  0.47 | t= 12.9s ETA=00:04:26
+[eil51.tsp] run  4/30 | best=   426 | mean=  426.25 std=  0.43 | t= 12.5s ETA=00:04:33
+[eil51.tsp] run  5/30 | best=   426 | mean=  426.20 std=  0.40 | t= 12.9s ETA=00:04:34
+[eil51.tsp] run  6/30 | best=   426 | mean=  426.17 std=  0.37 | t= 12.7s ETA=00:04:30
+[eil51.tsp] run  7/30 | best=   428 | mean=  426.43 std=  0.73 | t= 12.8s ETA=00:04:24
+[eil51.tsp] run  8/30 | best=   426 | mean=  426.38 std=  0.70 | t= 12.8s ETA=00:04:16
+[eil51.tsp] run  9/30 | best=   426 | mean=  426.33 std=  0.67 | t= 12.3s ETA=00:04:06
+[eil51.tsp] run 10/30 | best=   426 | mean=  426.30 std=  0.64 | t= 13.0s ETA=00:03:57
+[eil51.tsp] run 11/30 | best=   426 | mean=  426.27 std=  0.62 | t= 12.8s ETA=00:03:46
+[eil51.tsp] run 12/30 | best=   427 | mean=  426.33 std=  0.62 | t= 13.1s ETA=00:03:36
+[eil51.tsp] run 13/30 | best=   426 | mean=  426.31 std=  0.61 | t= 13.4s ETA=00:03:26
+[eil51.tsp] run 14/30 | best=   427 | mean=  426.36 std=  0.61 | t= 12.6s ETA=00:03:14
+[eil51.tsp] run 15/30 | best=   426 | mean=  426.33 std=  0.60 | t= 12.5s ETA=00:03:02
+[eil51.tsp] run 16/30 | best=   426 | mean=  426.31 std=  0.58 | t= 13.3s ETA=00:02:51
+[eil51.tsp] run 17/30 | best=   426 | mean=  426.29 std=  0.57 | t= 12.9s ETA=00:02:39
+[eil51.tsp] run 18/30 | best=   426 | mean=  426.28 std=  0.56 | t= 12.6s ETA=00:02:27
+[eil51.tsp] run 19/30 | best=   427 | mean=  426.32 std=  0.57 | t= 12.6s ETA=00:02:15
+[eil51.tsp] run 20/30 | best=   426 | mean=  426.30 std=  0.56 | t= 13.1s ETA=00:02:03
+[eil51.tsp] run 21/30 | best=   426 | mean=  426.29 std=  0.55 | t= 12.8s ETA=00:01:51
+[eil51.tsp] run 22/30 | best=   426 | mean=  426.27 std=  0.54 | t= 12.6s ETA=00:01:39
+[eil51.tsp] run 23/30 | best=   426 | mean=  426.26 std=  0.53 | t= 12.9s ETA=00:01:26
+[eil51.tsp] run 24/30 | best=   426 | mean=  426.25 std=  0.52 | t= 12.6s ETA=00:01:14
+[eil51.tsp] run 25/30 | best=   427 | mean=  426.28 std=  0.53 | t= 12.8s ETA=00:01:02
+[eil51.tsp] run 26/30 | best=   426 | mean=  426.27 std=  0.52 | t= 12.7s ETA=00:00:49
+[eil51.tsp] run 27/30 | best=   428 | mean=  426.33 std=  0.61 | t= 12.7s ETA=00:00:37
+[eil51.tsp] run 28/30 | best=   426 | mean=  426.32 std=  0.60 | t= 12.7s ETA=00:00:24
+[eil51.tsp] run 29/30 | best=   427 | mean=  426.34 std=  0.60 | t= 12.8s ETA=00:00:12
+[eil51.tsp] run 30/30 | best=   426 | mean=  426.33 std=  0.60 | t= 12.9s ETA=00:00:00
+>> eil51.tsp: avg=426.33, std=0.60
+
+>>> eil76.tsp (n=76) | resume from run 0/30
+[eil76.tsp] run  1/30 | best=   543 | mean=  543.00 std=  0.00 | t= 18.8s ETA=00:09:06
+[eil76.tsp] run  2/30 | best=   543 | mean=  543.00 std=  0.00 | t= 18.7s ETA=00:08:45
+[eil76.tsp] run  3/30 | best=   543 | mean=  543.00 std=  0.00 | t= 19.0s ETA=00:08:28
+[eil76.tsp] run  4/30 | best=   541 | mean=  542.50 std=  0.87 | t= 19.1s ETA=00:08:11
+[eil76.tsp] run  5/30 | best=   540 | mean=  542.00 std=  1.26 | t= 18.8s ETA=00:07:51
+[eil76.tsp] run  6/30 | best=   541 | mean=  541.83 std=  1.21 | t= 18.7s ETA=00:07:32
+[eil76.tsp] run  7/30 | best=   538 | mean=  541.29 std=  1.75 | t= 19.0s ETA=00:07:13
+[eil76.tsp] run  8/30 | best=   544 | mean=  541.62 std=  1.87 | t= 19.0s ETA=00:06:55
+[eil76.tsp] run  9/30 | best=   540 | mean=  541.44 std=  1.83 | t= 18.7s ETA=00:06:36
+[eil76.tsp] run 10/30 | best=   541 | mean=  541.40 std=  1.74 | t= 18.9s ETA=00:06:17
+[eil76.tsp] run 11/30 | best=   542 | mean=  541.45 std=  1.67 | t= 18.9s ETA=00:05:58
+[eil76.tsp] run 12/30 | best=   540 | mean=  541.33 std=  1.65 | t= 18.7s ETA=00:05:39
+[eil76.tsp] run 13/30 | best=   541 | mean=  541.31 std=  1.59 | t= 18.8s ETA=00:05:20
+[eil76.tsp] run 14/30 | best=   539 | mean=  541.14 std=  1.64 | t= 18.5s ETA=00:05:01
+[eil76.tsp] run 15/30 | best=   545 | mean=  541.40 std=  1.85 | t= 18.9s ETA=00:04:42
+[eil76.tsp] run 16/30 | best=   541 | mean=  541.38 std=  1.80 | t= 18.9s ETA=00:04:23
+[eil76.tsp] run 17/30 | best=   544 | mean=  541.53 std=  1.85 | t= 18.9s ETA=00:04:04
+[eil76.tsp] run 18/30 | best=   539 | mean=  541.39 std=  1.89 | t= 18.7s ETA=00:03:45
+[eil76.tsp] run 19/30 | best=   542 | mean=  541.42 std=  1.84 | t= 19.1s ETA=00:03:27
+[eil76.tsp] run 20/30 | best=   541 | mean=  541.40 std=  1.80 | t= 18.8s ETA=00:03:08
+[eil76.tsp] run 21/30 | best=   543 | mean=  541.48 std=  1.79 | t= 19.0s ETA=00:02:49
+[eil76.tsp] run 22/30 | best=   544 | mean=  541.59 std=  1.83 | t= 19.0s ETA=00:02:30
+[eil76.tsp] run 23/30 | best=   545 | mean=  541.74 std=  1.92 | t= 18.7s ETA=00:02:11
+[eil76.tsp] run 24/30 | best=   541 | mean=  541.71 std=  1.88 | t= 18.9s ETA=00:01:53
+[eil76.tsp] run 25/30 | best=   543 | mean=  541.76 std=  1.86 | t= 19.0s ETA=00:01:34
+[eil76.tsp] run 26/30 | best=   538 | mean=  541.62 std=  1.96 | t= 18.7s ETA=00:01:15
+[eil76.tsp] run 27/30 | best=   544 | mean=  541.70 std=  1.98 | t= 18.9s ETA=00:00:56
+[eil76.tsp] run 28/30 | best=   543 | mean=  541.75 std=  1.96 | t= 18.8s ETA=00:00:37
+[eil76.tsp] run 29/30 | best=   540 | mean=  541.69 std=  1.95 | t= 18.7s ETA=00:00:18
+[eil76.tsp] run 30/30 | best=   538 | mean=  541.57 std=  2.03 | t= 18.9s ETA=00:00:00
+>> eil76.tsp: avg=541.57, std=2.03
+
+>>> eil101.tsp (n=101) | resume from run 0/30
+[eil101.tsp] run  1/30 | best=   635 | mean=  635.00 std=  0.00 | t= 25.2s ETA=00:12:10
+[eil101.tsp] run  2/30 | best=   632 | mean=  633.50 std=  1.50 | t= 25.0s ETA=00:11:42
+[eil101.tsp] run  3/30 | best=   638 | mean=  635.00 std=  2.45 | t= 25.1s ETA=00:11:18
+[eil101.tsp] run  4/30 | best=   638 | mean=  635.75 std=  2.49 | t= 25.1s ETA=00:10:52
+[eil101.tsp] run  5/30 | best=   636 | mean=  635.80 std=  2.23 | t= 25.4s ETA=00:10:29
+[eil101.tsp] run  6/30 | best=   638 | mean=  636.17 std=  2.19 | t= 25.4s ETA=00:10:04
+[eil101.tsp] run  7/30 | best=   639 | mean=  636.57 std=  2.26 | t= 25.3s ETA=00:09:40
+[eil101.tsp] run  8/30 | best=   636 | mean=  636.50 std=  2.12 | t= 25.5s ETA=00:09:15
+[eil101.tsp] run  9/30 | best=   634 | mean=  636.22 std=  2.15 | t= 25.2s ETA=00:08:50
+[eil101.tsp] run 10/30 | best=   635 | mean=  636.10 std=  2.07 | t= 25.2s ETA=00:08:24
+[eil101.tsp] run 11/30 | best=   630 | mean=  635.55 std=  2.64 | t= 25.0s ETA=00:07:59
+[eil101.tsp] run 12/30 | best=   639 | mean=  635.83 std=  2.70 | t= 25.2s ETA=00:07:34
+[eil101.tsp] run 13/30 | best=   630 | mean=  635.38 std=  3.03 | t= 25.1s ETA=00:07:08
+[eil101.tsp] run 14/30 | best=   635 | mean=  635.36 std=  2.92 | t= 25.2s ETA=00:06:43
+[eil101.tsp] run 15/30 | best=   629 | mean=  634.93 std=  3.23 | t= 25.0s ETA=00:06:17
+[eil101.tsp] run 16/30 | best=   636 | mean=  635.00 std=  3.14 | t= 25.3s ETA=00:05:52
+[eil101.tsp] run 17/30 | best=   629 | mean=  634.65 std=  3.36 | t= 25.3s ETA=00:05:27
+[eil101.tsp] run 18/30 | best=   638 | mean=  634.83 std=  3.35 | t= 25.3s ETA=00:05:02
+[eil101.tsp] run 19/30 | best=   642 | mean=  635.21 std=  3.64 | t= 25.6s ETA=00:04:37
+[eil101.tsp] run 20/30 | best=   638 | mean=  635.35 std=  3.60 | t= 25.4s ETA=00:04:12
+[eil101.tsp] run 21/30 | best=   632 | mean=  635.19 std=  3.58 | t= 25.0s ETA=00:03:47
+[eil101.tsp] run 22/30 | best=   633 | mean=  635.09 std=  3.53 | t= 25.1s ETA=00:03:21
+[eil101.tsp] run 23/30 | best=   634 | mean=  635.04 std=  3.46 | t= 25.4s ETA=00:02:56
+[eil101.tsp] run 24/30 | best=   635 | mean=  635.04 std=  3.38 | t= 25.0s ETA=00:02:31
+[eil101.tsp] run 25/30 | best=   639 | mean=  635.20 std=  3.41 | t= 24.9s ETA=00:02:06
+[eil101.tsp] run 26/30 | best=   640 | mean=  635.38 std=  3.46 | t= 25.2s ETA=00:01:40
+[eil101.tsp] run 27/30 | best=   635 | mean=  635.37 std=  3.40 | t= 25.4s ETA=00:01:15
+[eil101.tsp] run 28/30 | best=   639 | mean=  635.50 std=  3.41 | t= 25.4s ETA=00:00:50
+[eil101.tsp] run 29/30 | best=   635 | mean=  635.48 std=  3.35 | t= 25.1s ETA=00:00:25
+[eil101.tsp] run 30/30 | best=   632 | mean=  635.37 std=  3.35 | t= 25.6s ETA=00:00:00
+>> eil101.tsp: avg=635.37, std=3.35
+
+>>> st70.tsp (n=70) | resume from run 0/30
+[st70.tsp] run  1/30 | best=   675 | mean=  675.00 std=  0.00 | t= 17.3s ETA=00:08:21
+[st70.tsp] run  2/30 | best=   675 | mean=  675.00 std=  0.00 | t= 18.0s ETA=00:08:13
+[st70.tsp] run  3/30 | best=   675 | mean=  675.00 std=  0.00 | t= 17.4s ETA=00:07:53
+[st70.tsp] run  4/30 | best=   680 | mean=  676.25 std=  2.17 | t= 17.2s ETA=00:07:34
+[st70.tsp] run  5/30 | best=   675 | mean=  676.00 std=  2.00 | t= 17.5s ETA=00:07:16
+[st70.tsp] run  6/30 | best=   675 | mean=  675.83 std=  1.86 | t= 17.6s ETA=00:06:59
+[st70.tsp] run  7/30 | best=   675 | mean=  675.71 std=  1.75 | t= 17.5s ETA=00:06:42
+[st70.tsp] run  8/30 | best=   675 | mean=  675.62 std=  1.65 | t= 17.4s ETA=00:06:24
+[st70.tsp] run  9/30 | best=   675 | mean=  675.56 std=  1.57 | t= 17.2s ETA=00:06:06
+[st70.tsp] run 10/30 | best=   675 | mean=  675.50 std=  1.50 | t= 17.1s ETA=00:05:48
+[st70.tsp] run 11/30 | best=   676 | mean=  675.55 std=  1.44 | t= 16.9s ETA=00:05:30
+[st70.tsp] run 12/30 | best=   677 | mean=  675.67 std=  1.43 | t= 17.4s ETA=00:05:12
+[st70.tsp] run 13/30 | best=   675 | mean=  675.62 std=  1.39 | t= 17.5s ETA=00:04:55
+[st70.tsp] run 14/30 | best=   676 | mean=  675.64 std=  1.34 | t= 17.2s ETA=00:04:37
+[st70.tsp] run 15/30 | best=   675 | mean=  675.60 std=  1.31 | t= 17.0s ETA=00:04:20
+[st70.tsp] run 16/30 | best=   675 | mean=  675.56 std=  1.27 | t= 17.2s ETA=00:04:02
+[st70.tsp] run 17/30 | best=   677 | mean=  675.65 std=  1.28 | t= 17.3s ETA=00:03:45
+[st70.tsp] run 18/30 | best=   675 | mean=  675.61 std=  1.25 | t= 17.0s ETA=00:03:27
+[st70.tsp] run 19/30 | best=   675 | mean=  675.58 std=  1.23 | t= 17.0s ETA=00:03:10
+[st70.tsp] run 20/30 | best=   675 | mean=  675.55 std=  1.20 | t= 17.0s ETA=00:02:52
+[st70.tsp] run 21/30 | best=   675 | mean=  675.52 std=  1.18 | t= 17.0s ETA=00:02:35
+[st70.tsp] run 22/30 | best=   675 | mean=  675.50 std=  1.16 | t= 17.2s ETA=00:02:18
+[st70.tsp] run 23/30 | best=   675 | mean=  675.48 std=  1.14 | t= 17.0s ETA=00:02:00
+[st70.tsp] run 24/30 | best=   679 | mean=  675.62 std=  1.32 | t= 18.0s ETA=00:01:43
+[st70.tsp] run 25/30 | best=   675 | mean=  675.60 std=  1.30 | t= 17.2s ETA=00:01:26
+[st70.tsp] run 26/30 | best=   675 | mean=  675.58 std=  1.28 | t= 17.2s ETA=00:01:09
+[st70.tsp] run 27/30 | best=   677 | mean=  675.63 std=  1.28 | t= 17.1s ETA=00:00:51
+[st70.tsp] run 28/30 | best=   675 | mean=  675.61 std=  1.26 | t= 17.6s ETA=00:00:34
+[st70.tsp] run 29/30 | best=   675 | mean=  675.59 std=  1.25 | t= 16.8s ETA=00:00:17
+[st70.tsp] run 30/30 | best=   680 | mean=  675.73 std=  1.46 | t= 17.2s ETA=00:00:00
+>> st70.tsp: avg=675.73, std=1.46
+
+>>> kroA100.tsp (n=100) | resume from run 0/30
+[kroA100.tsp] run  1/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.4s ETA=00:11:18
+[kroA100.tsp] run  2/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 24.6s ETA=00:11:12
+[kroA100.tsp] run  3/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.1s ETA=00:10:40
+[kroA100.tsp] run  4/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.7s ETA=00:10:16
+[kroA100.tsp] run  5/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.2s ETA=00:09:50
+[kroA100.tsp] run  6/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.2s ETA=00:09:25
+[kroA100.tsp] run  7/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.5s ETA=00:09:01
+[kroA100.tsp] run  8/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.5s ETA=00:08:37
+[kroA100.tsp] run  9/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.5s ETA=00:08:13
+[kroA100.tsp] run 10/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.6s ETA=00:07:50
+[kroA100.tsp] run 11/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.7s ETA=00:07:27
+[kroA100.tsp] run 12/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.5s ETA=00:07:03
+[kroA100.tsp] run 13/30 | best= 21282 | mean=21282.00 std=  0.00 | t= 23.6s ETA=00:06:40
+[kroA100.tsp] run 14/30 | best= 21305 | mean=21283.64 std=  5.92 | t= 23.6s ETA=00:06:16
+[kroA100.tsp] run 15/30 | best= 21282 | mean=21283.53 std=  5.74 | t= 23.0s ETA=00:05:52
+[kroA100.tsp] run 16/30 | best= 21282 | mean=21283.44 std=  5.57 | t= 23.5s ETA=00:05:29
+[kroA100.tsp] run 17/30 | best= 21282 | mean=21283.35 std=  5.41 | t= 23.2s ETA=00:05:05
+[kroA100.tsp] run 18/30 | best= 21282 | mean=21283.28 std=  5.27 | t= 23.4s ETA=00:04:41
+[kroA100.tsp] run 19/30 | best= 21282 | mean=21283.21 std=  5.14 | t= 23.8s ETA=00:04:18
+[kroA100.tsp] run 20/30 | best= 21282 | mean=21283.15 std=  5.01 | t= 23.4s ETA=00:03:55
+[kroA100.tsp] run 21/30 | best= 21282 | mean=21283.10 std=  4.90 | t= 23.6s ETA=00:03:31
+[kroA100.tsp] run 22/30 | best= 21282 | mean=21283.05 std=  4.79 | t= 23.3s ETA=00:03:07
+[kroA100.tsp] run 23/30 | best= 21282 | mean=21283.00 std=  4.69 | t= 23.3s ETA=00:02:44
+[kroA100.tsp] run 24/30 | best= 21282 | mean=21282.96 std=  4.60 | t= 23.5s ETA=00:02:20
+[kroA100.tsp] run 25/30 | best= 21282 | mean=21282.92 std=  4.51 | t= 23.4s ETA=00:01:57
+[kroA100.tsp] run 26/30 | best= 21282 | mean=21282.88 std=  4.42 | t= 23.3s ETA=00:01:33
+[kroA100.tsp] run 27/30 | best= 21282 | mean=21282.85 std=  4.34 | t= 23.4s ETA=00:01:10
+[kroA100.tsp] run 28/30 | best= 21317 | mean=21284.07 std=  7.64 | t= 23.5s ETA=00:00:46
+[kroA100.tsp] run 29/30 | best= 21282 | mean=21284.00 std=  7.52 | t= 23.2s ETA=00:00:23
+[kroA100.tsp] run 30/30 | best= 21282 | mean=21283.93 std=  7.40 | t= 23.6s ETA=00:00:00
+>> kroA100.tsp: avg=21283.93, std=7.40
+
+>>> kroC100.tsp (n=100) | resume from run 0/30
+[kroC100.tsp] run  1/30 | best= 20749 | mean=20749.00 std=  0.00 | t= 23.7s ETA=00:11:27
+[kroC100.tsp] run  2/30 | best= 20769 | mean=20759.00 std= 10.00 | t= 23.5s ETA=00:11:01
+[kroC100.tsp] run  3/30 | best= 20819 | mean=20779.00 std= 29.44 | t= 23.7s ETA=00:10:38
+[kroC100.tsp] run  4/30 | best= 20915 | mean=20813.00 std= 64.17 | t= 24.0s ETA=00:10:17
+[kroC100.tsp] run  5/30 | best= 20749 | mean=20800.20 std= 62.85 | t= 24.1s ETA=00:09:55
+[kroC100.tsp] run  6/30 | best= 20769 | mean=20795.00 std= 58.54 | t= 24.1s ETA=00:09:32
+[kroC100.tsp] run  7/30 | best= 20749 | mean=20788.43 std= 56.54 | t= 24.1s ETA=00:09:09
+[kroC100.tsp] run  8/30 | best= 20749 | mean=20783.50 std= 54.47 | t= 25.5s ETA=00:08:49
+[kroC100.tsp] run  9/30 | best= 20819 | mean=20787.44 std= 52.55 | t= 24.0s ETA=00:08:25
+[kroC100.tsp] run 10/30 | best= 20819 | mean=20790.60 std= 50.74 | t= 23.9s ETA=00:08:01
+[kroC100.tsp] run 11/30 | best= 20749 | mean=20786.82 std= 49.84 | t= 23.3s ETA=00:07:35
+[kroC100.tsp] run 12/30 | best= 20749 | mean=20783.67 std= 48.85 | t= 17.3s ETA=00:07:01
+[kroC100.tsp] run 13/30 | best= 20812 | mean=20785.85 std= 47.54 | t= 23.7s ETA=00:06:38
+[kroC100.tsp] run 14/30 | best= 20749 | mean=20783.21 std= 46.78 | t= 23.4s ETA=00:06:15
+[kroC100.tsp] run 15/30 | best= 20749 | mean=20780.93 std= 45.99 | t= 23.5s ETA=00:05:51
+[kroC100.tsp] run 16/30 | best= 20749 | mean=20778.94 std= 45.20 | t= 24.1s ETA=00:05:28
+[kroC100.tsp] run 17/30 | best= 20749 | mean=20777.18 std= 44.41 | t= 23.6s ETA=00:05:05
+[kroC100.tsp] run 18/30 | best= 20749 | mean=20775.61 std= 43.64 | t= 24.8s ETA=00:04:42
+[kroC100.tsp] run 19/30 | best= 20749 | mean=20774.21 std= 42.89 | t= 24.0s ETA=00:04:19
+[kroC100.tsp] run 20/30 | best= 20749 | mean=20772.95 std= 42.16 | t= 23.4s ETA=00:03:55
+[kroC100.tsp] run 21/30 | best= 20769 | mean=20772.76 std= 41.15 | t= 23.3s ETA=00:03:32
+[kroC100.tsp] run 22/30 | best= 20749 | mean=20771.68 std= 40.51 | t= 23.3s ETA=00:03:08
+[kroC100.tsp] run 23/30 | best= 20749 | mean=20770.70 std= 39.89 | t= 23.3s ETA=00:02:44
+[kroC100.tsp] run 24/30 | best= 20749 | mean=20769.79 std= 39.29 | t= 23.8s ETA=00:02:21
+[kroC100.tsp] run 25/30 | best= 20749 | mean=20768.96 std= 38.71 | t= 24.0s ETA=00:01:57
+[kroC100.tsp] run 26/30 | best= 20749 | mean=20768.19 std= 38.15 | t= 24.8s ETA=00:01:34
+[kroC100.tsp] run 27/30 | best= 20769 | mean=20768.22 std= 37.44 | t= 24.5s ETA=00:01:10
+[kroC100.tsp] run 28/30 | best= 20819 | mean=20770.04 std= 37.95 | t= 24.4s ETA=00:00:47
+[kroC100.tsp] run 29/30 | best= 20749 | mean=20769.31 std= 37.49 | t= 24.6s ETA=00:00:23
+[kroC100.tsp] run 30/30 | best= 20749 | mean=20768.63 std= 37.04 | t= 22.3s ETA=00:00:00
+>> kroC100.tsp: avg=20768.63, std=37.04
+
+>>> kroD100.tsp (n=100) | resume from run 0/30
+[kroD100.tsp] run  1/30 | best= 21389 | mean=21389.00 std=  0.00 | t= 14.1s ETA=00:06:47
+[kroD100.tsp] run  2/30 | best= 21309 | mean=21349.00 std= 40.00 | t= 24.3s ETA=00:08:56
+[kroD100.tsp] run  3/30 | best= 21389 | mean=21362.33 std= 37.71 | t= 24.3s ETA=00:09:24
+[kroD100.tsp] run  4/30 | best= 21362 | mean=21362.25 std= 32.66 | t= 24.6s ETA=00:09:27
+[kroD100.tsp] run  5/30 | best= 21294 | mean=21348.60 std= 39.98 | t= 24.4s ETA=00:09:18
+[kroD100.tsp] run  6/30 | best= 21294 | mean=21339.50 std= 41.79 | t= 24.7s ETA=00:09:05
+[kroD100.tsp] run  7/30 | best= 21366 | mean=21343.29 std= 39.78 | t= 24.2s ETA=00:08:47
+[kroD100.tsp] run  8/30 | best= 21384 | mean=21348.38 std= 39.58 | t= 24.3s ETA=00:08:28
+[kroD100.tsp] run  9/30 | best= 21309 | mean=21344.00 std= 39.31 | t= 24.4s ETA=00:08:08
+[kroD100.tsp] run 10/30 | best= 21309 | mean=21340.50 std= 38.74 | t= 24.7s ETA=00:07:47
+[kroD100.tsp] run 11/30 | best= 21490 | mean=21354.09 std= 56.67 | t= 24.1s ETA=00:07:25
+[kroD100.tsp] run 12/30 | best= 21351 | mean=21353.83 std= 54.27 | t= 23.8s ETA=00:07:02
+[kroD100.tsp] run 13/30 | best= 21362 | mean=21354.46 std= 52.18 | t= 23.9s ETA=00:06:39
+[kroD100.tsp] run 14/30 | best= 21389 | mean=21356.93 std= 51.07 | t= 24.7s ETA=00:06:17
+[kroD100.tsp] run 15/30 | best= 21389 | mean=21359.07 std= 49.98 | t= 24.9s ETA=00:05:55
+[kroD100.tsp] run 16/30 | best= 21347 | mean=21358.31 std= 48.48 | t= 23.9s ETA=00:05:31
+[kroD100.tsp] run 17/30 | best= 21309 | mean=21355.41 std= 48.44 | t= 24.5s ETA=00:05:08
+[kroD100.tsp] run 18/30 | best= 21389 | mean=21357.28 std= 47.70 | t= 24.4s ETA=00:04:45
+[kroD100.tsp] run 19/30 | best= 21442 | mean=21361.74 std= 50.14 | t= 23.8s ETA=00:04:21
+[kroD100.tsp] run 20/30 | best= 21374 | mean=21362.35 std= 48.94 | t= 24.1s ETA=00:03:58
+[kroD100.tsp] run 21/30 | best= 21389 | mean=21363.62 std= 48.10 | t= 24.6s ETA=00:03:34
+[kroD100.tsp] run 22/30 | best= 21389 | mean=21364.77 std= 47.29 | t= 23.7s ETA=00:03:10
+[kroD100.tsp] run 23/30 | best= 21374 | mean=21365.17 std= 46.29 | t= 23.8s ETA=00:02:46
+[kroD100.tsp] run 24/30 | best= 21374 | mean=21365.54 std= 45.34 | t= 23.7s ETA=00:02:22
+[kroD100.tsp] run 25/30 | best= 21374 | mean=21365.88 std= 44.46 | t= 23.8s ETA=00:01:59
+[kroD100.tsp] run 26/30 | best= 21437 | mean=21368.62 std= 45.69 | t= 24.5s ETA=00:01:35
+[kroD100.tsp] run 27/30 | best= 21499 | mean=21373.44 std= 51.15 | t= 24.1s ETA=00:01:11
+[kroD100.tsp] run 28/30 | best= 21410 | mean=21374.75 std= 50.69 | t= 23.8s ETA=00:00:47
+[kroD100.tsp] run 29/30 | best= 21294 | mean=21371.97 std= 51.94 | t= 24.6s ETA=00:00:23
+[kroD100.tsp] run 30/30 | best= 21309 | mean=21369.87 std= 52.30 | t= 24.1s ETA=00:00:00
+>> kroD100.tsp: avg=21369.87, std=52.30
+
+>>> lin105.tsp (n=105) | resume from run 0/30
+[lin105.tsp] run  1/30 | best= 14379 | mean=14379.00 std=  0.00 | t= 24.6s ETA=00:11:52
+[lin105.tsp] run  2/30 | best= 14379 | mean=14379.00 std=  0.00 | t= 24.6s ETA=00:11:28
+[lin105.tsp] run  3/30 | best= 14475 | mean=14411.00 std= 45.25 | t= 24.7s ETA=00:11:04
+[lin105.tsp] run  4/30 | best= 14379 | mean=14403.00 std= 41.57 | t= 24.2s ETA=00:10:37
+[lin105.tsp] run  5/30 | best= 14401 | mean=14402.60 std= 37.19 | t= 24.5s ETA=00:10:13
+[lin105.tsp] run  6/30 | best= 14379 | mean=14398.67 std= 35.07 | t= 24.6s ETA=00:09:49
+[lin105.tsp] run  7/30 | best= 14379 | mean=14395.86 std= 33.19 | t= 24.8s ETA=00:09:25
+[lin105.tsp] run  8/30 | best= 14379 | mean=14393.75 std= 31.54 | t= 24.6s ETA=00:09:00
+[lin105.tsp] run  9/30 | best= 14379 | mean=14392.11 std= 30.10 | t= 25.1s ETA=00:08:37
+[lin105.tsp] run 10/30 | best= 14379 | mean=14390.80 std= 28.82 | t= 25.5s ETA=00:08:14
+[lin105.tsp] run 11/30 | best= 14379 | mean=14389.73 std= 27.69 | t= 24.8s ETA=00:07:49
+[lin105.tsp] run 12/30 | best= 14401 | mean=14390.67 std= 26.69 | t= 26.1s ETA=00:07:26
+[lin105.tsp] run 13/30 | best= 14401 | mean=14391.46 std= 25.79 | t= 24.8s ETA=00:07:02
+[lin105.tsp] run 14/30 | best= 14379 | mean=14390.57 std= 25.06 | t= 24.8s ETA=00:06:37
+[lin105.tsp] run 15/30 | best= 14379 | mean=14389.80 std= 24.38 | t= 25.1s ETA=00:06:12
+[lin105.tsp] run 16/30 | best= 14379 | mean=14389.12 std= 23.75 | t= 24.7s ETA=00:05:47
+[lin105.tsp] run 17/30 | best= 14379 | mean=14388.53 std= 23.17 | t= 24.9s ETA=00:05:22
+[lin105.tsp] run 18/30 | best= 14426 | mean=14390.61 std= 24.10 | t= 25.1s ETA=00:04:58
+[lin105.tsp] run 19/30 | best= 14379 | mean=14390.00 std= 23.60 | t= 24.7s ETA=00:04:33
+[lin105.tsp] run 20/30 | best= 14379 | mean=14389.45 std= 23.12 | t= 24.7s ETA=00:04:08
+[lin105.tsp] run 21/30 | best= 14379 | mean=14388.95 std= 22.67 | t= 25.0s ETA=00:03:43
+[lin105.tsp] run 22/30 | best= 14379 | mean=14388.50 std= 22.25 | t= 24.7s ETA=00:03:18
+[lin105.tsp] run 23/30 | best= 14379 | mean=14388.09 std= 21.85 | t= 24.9s ETA=00:02:53
+[lin105.tsp] run 24/30 | best= 14379 | mean=14387.71 std= 21.46 | t= 24.9s ETA=00:02:29
+[lin105.tsp] run 25/30 | best= 14379 | mean=14387.36 std= 21.10 | t= 24.8s ETA=00:02:04
+[lin105.tsp] run 26/30 | best= 14434 | mean=14389.15 std= 22.55 | t= 24.7s ETA=00:01:39
+[lin105.tsp] run 27/30 | best= 14379 | mean=14388.78 std= 22.21 | t= 25.1s ETA=00:01:14
+[lin105.tsp] run 28/30 | best= 14379 | mean=14388.43 std= 21.89 | t= 25.1s ETA=00:00:49
+[lin105.tsp] run 29/30 | best= 14379 | mean=14388.10 std= 21.57 | t= 25.1s ETA=00:00:24
+[lin105.tsp] run 30/30 | best= 14379 | mean=14387.80 std= 21.28 | t= 24.8s ETA=00:00:00
+>> lin105.tsp: avg=14387.80, std=21.28
+
+>>> pcb442.tsp (n=442) | resume from run 0/30
+[pcb442.tsp] run  1/30 | best= 52775 | mean=52775.00 std=  0.00 | t=151.7s ETA=01:13:18
+[pcb442.tsp] run  2/30 | best= 53510 | mean=53142.50 std=367.50 | t=163.1s ETA=01:13:26
+[pcb442.tsp] run  3/30 | best= 52253 | mean=52846.00 std=515.62 | t=163.9s ETA=01:11:47
+[pcb442.tsp] run  4/30 | best= 52746 | mean=52821.00 std=448.63 | t=150.8s ETA=01:08:11
+[pcb442.tsp] run  5/30 | best= 52927 | mean=52842.20 std=403.50 | t=168.0s ETA=01:06:27
+[pcb442.tsp] run  6/30 | best= 52648 | mean=52809.83 std=375.39 | t=180.1s ETA=01:05:10
+[pcb442.tsp] run  7/30 | best= 53107 | mean=52852.29 std=362.77 | t=169.3s ETA=01:02:48
+[pcb442.tsp] run  8/30 | best= 52960 | mean=52865.75 std=341.20 | t=153.6s ETA=00:59:36
+[pcb442.tsp] run  9/30 | best= 52281 | mean=52800.78 std=370.48 | t=150.7s ETA=00:56:26
+[pcb442.tsp] run 10/30 | best= 52822 | mean=52802.90 std=351.52 | t=150.6s ETA=00:53:23
+[pcb442.tsp] run 11/30 | best= 52680 | mean=52791.73 std=337.02 | t=151.5s ETA=00:50:28
+[pcb442.tsp] run 12/30 | best= 53810 | mean=52876.58 std=428.16 | t=152.5s ETA=00:47:38
+[pcb442.tsp] run 13/30 | best= 53077 | mean=52892.00 std=414.82 | t=156.3s ETA=00:44:56
+[pcb442.tsp] run 14/30 | best= 52908 | mean=52893.14 std=399.75 | t=152.2s ETA=00:42:10
+[pcb442.tsp] run 15/30 | best= 53569 | mean=52938.20 std=421.39 | t=153.5s ETA=00:39:27
+[pcb442.tsp] run 16/30 | best= 53008 | mean=52942.56 std=408.36 | t=154.2s ETA=00:36:46
+[pcb442.tsp] run 17/30 | best= 53198 | mean=52957.59 std=400.70 | t=153.8s ETA=00:34:06
+[pcb442.tsp] run 18/30 | best= 53404 | mean=52982.39 std=402.61 | t=162.2s ETA=00:31:32
+[pcb442.tsp] run 19/30 | best= 53066 | mean=52986.79 std=392.32 | t=176.8s ETA=00:29:05
+[pcb442.tsp] run 20/30 | best= 53649 | mean=53019.90 std=408.71 | t=183.4s ETA=00:26:39
+[pcb442.tsp] run 21/30 | best= 52758 | mean=53007.43 std=402.75 | t=183.9s ETA=00:24:09
+[pcb442.tsp] run 22/30 | best= 52881 | mean=53001.68 std=394.37 | t=175.8s ETA=00:21:33
+[pcb442.tsp] run 23/30 | best= 53282 | mean=53013.87 std=389.91 | t=176.0s ETA=00:18:56
+[pcb442.tsp] run 24/30 | best= 53230 | mean=53022.88 std=384.14 | t=174.1s ETA=00:16:17
+[pcb442.tsp] run 25/30 | best= 53501 | mean=53042.00 std=387.86 | t=174.7s ETA=00:13:36
+[pcb442.tsp] run 26/30 | best= 53078 | mean=53043.38 std=380.39 | t=158.8s ETA=00:10:52
+[pcb442.tsp] run 27/30 | best= 52187 | mean=53011.67 std=406.81 | t=154.1s ETA=00:08:08
+[pcb442.tsp] run 28/30 | best= 53071 | mean=53013.79 std=399.63 | t=164.3s ETA=00:05:25
+[pcb442.tsp] run 29/30 | best= 52736 | mean=53004.21 std=395.94 | t=171.6s ETA=00:02:43
+[pcb442.tsp] run 30/30 | best= 53915 | mean=53034.57 std=422.22 | t=165.1s ETA=00:00:00
+>> pcb442.tsp: avg=53034.57, std=422.22
+
+>>> pr2392.tsp (n=2392) | resume from run 0/30
+[pr2392.tsp] run  1/30 | best=461765 | mean=461765.00 std=  0.00 | t=2274.2s ETA=18:19:11
+[pr2392.tsp] run  2/30 | best=463533 | mean=462649.00 std=884.00 | t=2067.8s ETA=16:53:08
+[pr2392.tsp] run  3/30 | best=474148 | mean=466482.00 std=5468.52 | t=2053.1s ETA=15:59:16
+[pr2392.tsp] run  4/30 | best=464491 | mean=465984.25 std=4813.71 | t=2172.0s ETA=15:28:06
+[pr2392.tsp] run  5/30 | best=471240 | mean=467035.40 std=4791.36 | t=1553.4s ETA=14:03:22
+[pr2392.tsp] run  6/30 | best=465787 | mean=466827.33 std=4398.57 | t=1397.9s ETA=12:47:53
+[pr2392.tsp] run  7/30 | best=463364 | mean=466332.57 std=4248.79 | t=1368.4s ETA=11:45:42
+[pr2392.tsp] run  8/30 | best=465669 | mean=466249.62 std=3980.43 | t=1541.0s ETA=11:01:16
+[pr2392.tsp] run  9/30 | best=467977 | mean=466441.56 std=3791.85 | t=1315.9s ETA=10:12:15
+[pr2392.tsp] run 10/30 | best=470748 | mean=466872.20 std=3822.22 | t=1327.5s ETA=09:29:02
+[pr2392.tsp] run 11/30 | best=465872 | mean=466781.27 std=3655.67 | t=1513.5s ETA=08:55:01
+[pr2392.tsp] run 12/30 | best=465407 | mean=466666.75 std=3520.59 | t=2035.8s ETA=08:35:30
+[pr2392.tsp] run 13/30 | best=462907 | mean=466377.54 std=3527.73 | t=2014.8s ETA=08:13:20
+	[pr2392.tsp] run 14/30 | best=467098 | mean=466429.00 std=3404.46 | t=1320.9s ETA=07:36:18
+[pr2392.tsp] run 15/30 | best=465606 | mean=466374.13 std=3295.42 | t=1276.3s ETA=07:00:32
+[pr2392.tsp] run 16/30 | best=469334 | mean=466559.12 std=3270.23 | t=1280.9s ETA=06:26:39
+[pr2392.tsp] run 17/30 | best=467615 | mean=466621.24 std=3182.30 | t=1208.6s ETA=05:53:19
+[pr2392.tsp] run 18/30 | best=473626 | mean=467010.39 std=3484.10 | t=1173.6s ETA=05:21:03
+[pr2392.tsp] run 19/30 | best=462462 | mean=466771.00 std=3539.99 | t=1189.6s ETA=04:50:17
+[pr2392.tsp] run 20/30 | best=464596 | mean=466662.25 std=3482.77 | t=1180.7s ETA=04:20:32
+[pr2392.tsp] run 21/30 | best=461106 | mean=466397.67 std=3598.91 | t=1185.9s ETA=03:51:47
+[pr2392.tsp] run 22/30 | best=469551 | mean=466541.00 std=3576.99 | t=1195.7s ETA=03:23:55
+[pr2392.tsp] run 23/30 | best=462614 | mean=466370.26 std=3588.86 | t=1191.7s ETA=02:56:43
+[pr2392.tsp] run 24/30 | best=466882 | mean=466391.58 std=3514.78 | t=1176.9s ETA=02:30:04
+[pr2392.tsp] run 25/30 | best=471002 | mean=466576.00 std=3560.31 | t=1187.2s ETA=02:04:00
+[pr2392.tsp] run 26/30 | best=466100 | mean=466557.69 std=3492.37 | t=1185.2s ETA=01:38:25
+[pr2392.tsp] run 27/30 | best=466715 | mean=466563.52 std=3427.21 | t=1189.1s ETA=01:13:17
+[pr2392.tsp] run 28/30 | best=472064 | mean=466759.96 std=3516.85 | t=1202.6s ETA=00:48:32
+[pr2392.tsp] run 29/30 | best=463069 | mean=466632.69 std=3520.70 | t=1191.9s ETA=00:24:07
+[pr2392.tsp] run 30/30 | best=460718 | mean=466435.53 std=3620.69 | t=1191.2s ETA=00:00:00
+>> pr2392.tsp: avg=466435.53, std=3620.69
+
+>>> usa13509.tsp (n=13509) | resume from run 0/30
