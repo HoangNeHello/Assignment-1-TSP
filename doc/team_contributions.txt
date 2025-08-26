@@ -32,9 +32,9 @@ Contributions to Date
 
 Reallocation and Current Plan
 - Exercise 6 (evolutionary algorithm benchmarking): led by Jiahe, Cynthia, and Markus.
-  Finalize three EA variants, run grids with population sizes 20, 50, 100, 200 and generations 2000, 5000, 10000, 20000. Produce results/your_EA.txt and design rationale in doc/algorithm_design.txt.
+  Finalize three EA variants, run grids with population sizes 20, 50, 100, 200 and generations 2000, 5000, 10000, 20000. Produce results/memetic_ga.txt and design rationale in doc/algorithm_design.txt.
 - Exercise 7 (Inver-over algorithm): led by Eileen and Liu.
-  Complete Inver-over implementation and 30-run benchmarks. Write results/inverover.txt and results/your_EA_inverover_comparison.txt.
+  Complete Inver-over implementation and 30-run benchmarks. Write results/inverover.txt and results/memetic_ga_inverover_comparison.txt.
 - Submission packaging: Hoang.
   Maintain repository structure, verify outputs, and prepare doc/readme.txt.
 

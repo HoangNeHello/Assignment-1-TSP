@@ -8,7 +8,7 @@ INSTANCES = [
 ]
 POPS = [20, 50, 100, 200]
 GENS = [2000, 5000, 10000, 20000]
-ALGOS = [1, 2, 3]  # your three algorithms in algorithms.py
+ALGOS = [1, 2, 3]  # three algorithms in algorithms.py
 
 def parse_cost(stdout: str):
     """
