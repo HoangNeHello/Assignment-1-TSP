@@ -1,0 +1,40 @@
+Random Search lower bound on F1 (OneMax)
+=============================================
+
+Statement
+---------
+For OneMax on {0,1}^n, Random Search (RS) needs at least 2^{n/2} fitness evaluations
+to find the optimum with probability 1 - e^{-Ω(n)}.
+
+Setup
+-----
+- Problem F1 (OneMax): f(x) = sum_{i=1}^n x_i with unique optimum x* = 1^n.
+- Random Search: at each evaluation, sample a bit string uniformly at random from {0,1}^n,
+  independently of past samples; keep the best-so-far (this choice does not affect future samples).
+- Let T be the evaluation budget.
+
+Proof
+-----
+The probability that a *single* uniform sample equals the optimum x* is
+    p = P[sample = x*] = 2^{-n}.
+
+After T independent evaluations, the probability that the optimum has been seen at least once is
+    P_T = 1 - (1 - p)^T = 1 - (1 - 2^{-n})^T.
+
+Using the union bound (or the inequality 1 - (1 - x)^k <= kx for x in [0,1]), we get
+    P_T <= T * 2^{-n}.
+
+Choose T = 2^{n/2}. Then
+    P_T <= 2^{n/2} * 2^{-n} = 2^{-n/2} = e^{-(ln 2) * n / 2} = e^{-Ω(n)}.
+
+Therefore,
+    P[RS has NOT found the optimum by T = 2^{n/2}] >= 1 - e^{-Ω(n)}.
+
+Equivalently: with probability 1 - e^{-Ω(n)}, Random Search needs at least 2^{n/2}
+fitness evaluations to reach the optimal search point on F1.  □
+
+Notes
+-----
+- The argument uses only that RS samples uniformly and independently at each step.
+- The bound is tight up to constants in the exponent: hitting a particular string requires
+  Θ(2^n) trials in expectation, and 2^{n/2} trials make success exponentially unlikely.

@@ -3,11 +3,11 @@ import os, math
 import numpy as np
 import ioh
 
-# --- config (match Exercise 2) ---
+# --- config ---
 DIM = 100
 BUDGET = 100_000          # total evals per run (includes the initial x* eval)
 RUNS = 10
-FUNCTIONS = [1, 2, 3, 18, 23, 24, 25]   # Exercise 2 Set up
+FUNCTIONS = [1, 2, 3, 18, 23, 24, 25]
 INSTANCE = 1
 RHO_LIST = ["1", "1/sqrt(n)", "1/n"]   # printed labels; resolved at runtime
 LOG_DIR = "ioh_logs_mmas"

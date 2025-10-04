@@ -1,52 +1,52 @@
-# example.py
-import os
+# problem_example.py
+from ioh import get_problem, ProblemClass, logger
+import sys
 import numpy as np
-import ioh
 
-# --- config you may tweak ---
-DIM = 100                 # dimension of the bitstring
-BUDGET = 10000            # #evaluations per run
-RUNS = 20                 # independent runs per function
-FUNCTIONS = [1, 2, 18]    # F1 OneMax, F2 LeadingOnes, F18 LABS
-INSTANCE = 1              # use instance 1 for all
-LOG_DIR = "ioh_logs"      # output folder for IOHanalyzer
+# Provided Random Search
+def random_search(func, budget=None):
+    # budget per run = 50 * n^2
+    if budget is None:
+        n = func.meta_data.n_variables
+        budget = int(50 * n * n)
 
-# Random Search over {0,1}^n: sample fresh bitstrings, keep the best (logger will record)
-def random_search(problem, budget, rng):
-    best_fx = float("-inf")
-    n = problem.meta_data.n_variables
-    for _ in range(budget):
-        x = rng.integers(0, 2, size=n, dtype=np.int32)
-        fx = problem(x)              # evaluation is automatically logged
-        if fx > best_fx:
-            best_fx = fx
+    # known optimum
+    if func.meta_data.problem_id == 18 and func.meta_data.n_variables == 32:
+        optimum = 8
+    else:
+        optimum = func.optimum.y
 
-def main():
-    os.makedirs(LOG_DIR, exist_ok=True)
+    # 10 independent runs
+    for _ in range(10):
+        f_opt = -sys.float_info.max
+        for _ in range(budget):
+            x = np.random.randint(2, size=func.meta_data.n_variables)
+            f = func(x)              # IOH logs each evaluation
+            if f > f_opt:
+                f_opt = f
+            if f_opt >= optimum:     # early stop
+                break
+        func.reset()
 
-    for fid in FUNCTIONS:
-        # Create the problem from the PBO suite
-        problem = ioh.get_problem(
-            fid, dimension=DIM, instance=INSTANCE,
-            problem_class=ioh.ProblemClass.PBO
-        )
+    return
 
-        # One logger per (fid) is fine; IOHanalyzer will see runs by run-id in the files
-        logger = ioh.logger.Analyzer(
-            root=os.getcwd(),
-            folder_name=LOG_DIR,
-            algorithm_name="RandomSearch",
-            algorithm_info=f"budget={BUDGET},runs={RUNS}",
-        )
-        problem.attach_logger(logger)
+# Problems to test (template uses n=50)
+om   = get_problem(fid=1,  dimension=50, instance=1, problem_class=ProblemClass.PBO)
+lo   = get_problem(fid=2,  dimension=50, instance=1, problem_class=ProblemClass.PBO)
+labs = get_problem(fid=18, dimension=50, instance=1, problem_class=ProblemClass.PBO)
 
-        for run in range(RUNS):
-            # set deterministic RNG per run
-            rng = np.random.default_rng(seed=run + 12345)
-            problem.reset()           # reset before each run
-            random_search(problem, BUDGET, rng)
+# Logger (IOHprofiler format)
+l = logger.Analyzer(
+    root="data",                 # base folder (will be created)
+    folder_name="run",           # subfolder to zip and upload
+    algorithm_name="RandomSearch",
+    algorithm_info="provided template"
+)
 
-        logger.close()                # flush files
+# Attach, run, detach
+om.attach_logger(l);   random_search(om)
+lo.attach_logger(l);   random_search(lo)
+labs.attach_logger(l); random_search(labs)
 
-if __name__ == "__main__":
-    main()
+# Flush files
+del l
