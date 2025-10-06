@@ -1,0 +1,55 @@
+F1 — OneMax
+
+Early: RLS and (1+1) EA pull ahead immediately; RS climbs very slowly.
+Mid/Late: RLS usually leads slightly; (1+1) EA stays close but often a hair slower due to occasional unhelpful multi-bit mutations. RS remains far behind.
+Variance: Hill-climbers have tight bands; RS much wider and lower.
+Why: Unimodal; single-bit improvements are abundant and reliably found by RLS; (1+1) EA’s multi-bit flips add noise without helping much.
+Takeaway: RLS ≳ (1+1) EA ≫ RS across the whole budget.
+
+F2 — LeadingOnes
+
+Early: RLS advances the leading prefix steadily; RS rarely extends long prefixes by chance.
+Mid/Late: RLS typically dominates; (1+1) EA trails because it must flip exactly the next zero→one and avoid breaking earlier ones. RS remains flat by comparison.
+Variance: RLS tight; (1+1) EA a bit wider; RS widest.
+Why: Progress requires flipping a specific next bit; 1-bit flips are ideal, while multi-bit flips risk destroying progress.
+Takeaway: RLS > (1+1) EA ≫ RS; expect smooth step-like growth for RLS.
+
+F3 — Linear (unimodal)
+
+Early: RLS accelerates quickly; RS lags.
+Mid/Late: RLS generally finishes ahead; (1+1) EA close behind; RS far below.
+Variance: Both hill-climbers tight; RS wider and lower.
+Why: Like F1, unimodal and friendly to single-bit improvements.
+Takeaway: RLS ≳ (1+1) EA ≫ RS.
+
+F18 — LABS (rugged)
+
+Early: RS sometimes shows noisy jumps but no sustained progress; RLS/(1+1) EA start modestly.
+Mid/Late: (1+1) EA often overtakes RLS because rare beneficial multi-bit flips can escape shallow local structures; RS remains weakest.
+Variance: Largest here; expect wide bands, especially for RS and (1+1) EA.
+Why: Rugged landscape; strict 1-bit moves (RLS) get stuck more easily.
+Takeaway: (1+1) EA ≳ RLS ≫ RS; higher variance is normal.
+
+F23 — N-Queens (many local optima)
+
+Early: RLS climbs reasonably; RS weak.
+Mid/Late: (1+1) EA typically edges RLS by the end via occasional multi-bit improvements; RS remains lowest.
+Variance: Noticeable, with (1+1) EA often wider.
+Why: Many local optima; rare multi-bit improvements help escape.
+Takeaway: (1+1) EA ≳ RLS ≫ RS.
+
+F24 — Concatenated Trap (deceptive)
+
+Early: Hill-climbers gain some ground; RS near flat.
+Mid/Late: Both RLS and (1+1) EA tend to plateau; large coordinated flips are needed to leave traps, which are unlikely at mutation rate 1/n. RS stays worst.
+Variance: Moderate; curves flatten early relative to budget.
+Why: Deception draws methods into suboptimal basins; local moves can’t reliably cross trap boundaries.
+Takeaway: RLS ≳ (1+1) EA ≫ RS, but absolute gains are small and plateaus common.
+
+F25 — NK Landscapes (rugged; use linear y-axis)
+
+Early: RS noisy and weak; hill-climbers modest.
+Mid/Late: (1+1) EA often surpasses RLS by late budget due to rare but valuable multi-bit moves; RS remains lowest.
+Variance: Widest among all functions; expect visible run-to-run spread.
+Why: High ruggedness; single-bit moves stall frequently; occasional multi-bit improvements help (1+1) EA.
+Takeaway: (1+1) EA ≳ RLS ≫ RS; plot with linear y so zeros aren’t hidden.
