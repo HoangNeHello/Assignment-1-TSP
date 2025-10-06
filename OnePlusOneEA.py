@@ -51,7 +51,6 @@ def OnePlusOneEA(func, budget = None):
             if (f_opt >= optimum):
                 break
         
-        print(func.state)
         func.reset()
 
     return f_opt, sdash_opt
@@ -59,7 +58,11 @@ def OnePlusOneEA(func, budget = None):
 # Declaration of problems to be tested.
 om = get_problem(fid = 1, dimension=100, instance=1, problem_class = ProblemClass.PBO)
 lo = get_problem(fid = 2, dimension=100, instance=1, problem_class = ProblemClass.PBO)
+prob3 = get_problem(fid = 3, dimension=100, instance=1, problem_class = ProblemClass.PBO)
 labs = get_problem(fid = 18, dimension=100, instance=1, problem_class = ProblemClass.PBO)
+prob23 = get_problem(fid = 23, dimension=100, instance=1, problem_class = ProblemClass.PBO)
+prob24 = get_problem(fid = 24, dimension=100, instance=1, problem_class = ProblemClass.PBO)
+prob25 = get_problem(fid = 25, dimension=100, instance=1, problem_class = ProblemClass.PBO)
 
 # Create default logger compatible with IOHanalyzer
 # `root` indicates where the output files are stored.
@@ -74,10 +77,22 @@ om.attach_logger(log)
 OnePlusOneEA(om, 100000)
 
 lo.attach_logger(log)
-OnePlusOneEA(om, 100000)
+OnePlusOneEA(lo, 100000)
+
+prob3.attach_logger(log)
+OnePlusOneEA(prob3, 100000)
 
 labs.attach_logger(log)
-OnePlusOneEA(om, 100000)
+OnePlusOneEA(labs, 100000)
+
+prob23.attach_logger(log)
+OnePlusOneEA(prob23, 100000)
+
+prob24.attach_logger(log)
+OnePlusOneEA(prob24, 100000)
+
+prob25.attach_logger(log)
+OnePlusOneEA(prob25, 100000)
 
 # This statemenet is necessary in case data is not flushed yet.
 del log
