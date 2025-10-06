@@ -40,7 +40,7 @@ def OnePlusOneEA(func, budget = None):
                 # Checks if this value is less than 1/len(sdash)
                 # Results in the bitflip only happening with a probability of 1/len(sdash)
                 if (random.random() < 1/len(sdash)):
-                    # Performs a bitflip with boolean operators
+                    # Performs a bitflip
                     sdash[k] = 1 - sdash[k]
                 # print(k)
 
