@@ -1,0 +1,48 @@
+(1+1) EA summary
+
+“F1_OneMax”
+Summary: The trend of the mean resembles half a sigmoid curve, with a plateau representing the range of fitness evalutations required to reach the optimum solution occuring roughly after 910 
+
+Interesting observations: 
+1.	The optimum solution was reach well before the maximum iteration budget of 100,000 was exausted, with solutions being found between 800 - 1800 iterations 
+
+“F2_LeadingOnes”
+Summary: The trend of the mean is roughly linear.
+
+Interesting observations: 
+1.	There is a very wide standard deviation towards the middle to end, indicating significant variability in the efficiency of the algorithm for this fitness function.
+
+
+“F3_A linear function with harmonic weights”
+Summary: The trend of the mean resembles a half sigmoid curve, with a plateau occuring roughly after 911 fitness evaluations
+
+Interesting observations:
+1.	Results seem very similar to those for OneMax, however the range of iterations in which the optimum value is found is significantly larger, being roughly between 800 - 2800 iterations
+
+“F18_LABS”
+Summary: Large jump in fitness at evaluation number 1696, with a roughly linear trend thereafter
+
+Interesting observations: 
+1.  Sudden jump in fitness at the beginning indicates an extremely sudden ramping followed by a sudden plateau in fitness, with little improvement in fitness beyond that point.
+2.  No trials successfully reached an optimum result before reaching the 100,000 iteration budget.
+
+“F23_N-Queens problem”
+Summary: Uneaven but steady increase in fitness with wide standard deviation up to a plateau of 8.5 at evaluation 761, which continues until the maximum iteration count is reached.
+
+Interesting observations: 
+1.	The plateau is very consistent, with no change in either the fitness value or standard deviation observed until the maximum iterations is reached
+
+“F24_concatenated trap”
+Summary: The trend begins linearly, before slowly increasing up to the final plateau value of 16
+
+Interesting observations:
+1.	There is very little difference in fitness values. The average fitness starts at 15.76 and ends at 16
+2.  Once the plateau at evaluation 925 occurs there is no standard deviation at all.
+
+
+“F25_NKL”
+Summary: The x axis log plot shows a sigmoid curve trend, with a plateau at 17,000 evaluations with little change past this point
+
+Interesting observations:
+1.	All returned fitness values are negative.
+2.  Fitness values of -3.0 and greater occured within about 1000 trials, viewing a linear axis plot shows an incredibly sharp increase at the beginning relative to the performance thereafter
