@@ -1,0 +1,16 @@
+{
+	"version": "0.3.22", 
+	"suite": "unknown_suite", 
+	"function_id": 18, 
+	"function_name": "LABS", 
+	"maximization": true, 
+	"algorithm": {"name": "MMAS", "info": "run_0"},
+	"attributes": ["evaluations", "raw_y"],
+	"scenarios": [
+		{"dimension": 100,
+		"path": "data_f18_LABS/IOHprofiler_f18_DIM100.dat",
+		"runs": [
+			{"instance": 1, "evals": 100000, "best": {"evals": 535, "y": 3.477051460361613, "x": [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0]}}
+		]}
+	]
+}

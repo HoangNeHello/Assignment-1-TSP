@@ -1,0 +1,16 @@
+{
+	"version": "0.3.22", 
+	"suite": "unknown_suite", 
+	"function_id": 18, 
+	"function_name": "LABS", 
+	"maximization": true, 
+	"algorithm": {"name": "ACO", "info": "run_0"},
+	"attributes": ["evaluations", "raw_y"],
+	"scenarios": [
+		{"dimension": 100,
+		"path": "data_f18_LABS/IOHprofiler_f18_DIM100.dat",
+		"runs": [
+			{"instance": 1, "evals": 100000, "best": {"evals": 23, "y": 1.6097875080489374, "x": [0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0]}}
+		]}
+	]
+}

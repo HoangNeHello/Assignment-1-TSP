@@ -1,0 +1,16 @@
+{
+	"version": "0.3.22", 
+	"suite": "unknown_suite", 
+	"function_id": 24, 
+	"function_name": "ConcatenatedTrap", 
+	"maximization": true, 
+	"algorithm": {"name": "MMAS", "info": "run_2"},
+	"attributes": ["evaluations", "raw_y"],
+	"scenarios": [
+		{"dimension": 100,
+		"path": "data_f24_ConcatenatedTrap/IOHprofiler_f24_DIM100.dat",
+		"runs": [
+			{"instance": 1, "evals": 100000, "best": {"evals": 897, "y": 16.400000000000002, "x": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}
+		]}
+	]
+}
