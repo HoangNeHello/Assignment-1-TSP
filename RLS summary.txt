@@ -1,0 +1,49 @@
+RLS summary 
+
+“F1_OneMax”
+Summary: The X-axis shows the number of function evaluations, while the Y-axis shows the best-so-far fitness value. The highest number of 1's is found at each step.
+Interesting observations: 
+1.	The log-scaled X-axis represents early-stage learning efficiency, with the majority of improvement occurring before 1,000 evaluations.
+2.	The unimodal functions like OneMax, the low variance suggests that RLS is a reliable optimizer 
+
+“F2_LeadingOnes”
+Summary: It is a more complex variant than the simple OneMax functions; the sharded area indicates the standard deviation over multiple independent runs. 
+Interesting observations: 
+1.	The rapid increase and delayed improvement suggest that the F2 problem is more difficult than the F1 problem, probably needing a series of dependent bit flips before improvements show up.
+
+2.	The extended flat zone can be explained by the fact that RLS is longer to break out of initial peaks due to its deterministic acceptance rule, which never accepts poorer solutions.
+
+
+“F3_A linear function with harmonic weights”
+Summary: The shaded region (sd) stays generally narrow, especially in later stages, indicating a stable performance over runs. This illustrates how RLS behaves consistently and dependably over several runs.
+
+Interesting observations:
+1.	It demonstrated a smooth, linear curve in problems with a distinct, unimodal fitness landscape, which F3 seems to be.
+2.	The low variability indicates that random starting points have minimal impact on final results and that RLS's search pattern is stable.
+
+“F18_LABS”
+Summary: It seems that this fitness function has a maximum value of about 3.7.
+Interesting observations: After approximately 1,000 function evaluations, the shaded region, which represents the confidence band across several independent runs, widens noticeably, indicating a significant increase in variability during the final stages of optimization.
+
+“F23_N-Queens problem”
+Summary: This is to place N queens on a N×N chessboard in such a way that no two queens are in danger of each other. The fitness function probably counts the number of queen pairings that do not assault or a similar conflict-minimization metric, with an optimum of roughly 3.7. 
+
+Interesting observations: 
+1.	It has a postponed Launch Point
+The swift advancement stage starts only after about 20-50 assessments, which is a bit later than anticipated for a basic combinatorial issue.
+2.	This is especially notable and suggests that the N-Queens fitness landscape offers highly consistent convergence behavior across various runs.
+
+“F24_concatenated trap”
+Summary: The algorithm begins close to zero and initially shows minimal improvement, later experiencing a sharp rise in the best-so-far value.
+
+Interesting observations:
+1.	RLS exhibits predictable behavior after it stabilizes, as evidenced by the compact confidence band following convergence. 
+
+
+“F25_NKL”
+Summary: The best-so-far value stays close to 0, which indicates that early random trials don't show significant improvement
+Interesting observations:
+1.	Find reasonable quality solutions relatively quickly in thousands of evaluations
+2.	Once it converged, it maintained a stable performance with little variability, which is a sign of convergence 
+
+
