@@ -1,0 +1,48 @@
+Fixed-Budget Comparison Analysis (n=100, budget=100k evals, 10 runs)
+
+Algorithms: Random Search (RS), RLS, (1+1) EA, MMAS (ρ ∈ {1, 1/√n, 1/n})
+
+---------------------------------------------------------------------
+F1 (OneMax)
+- Ordering: RLS ≈ (1+1) EA ≈ MMAS  ≫ RS
+- Fast early convergence; RS slow.
+- MMAS ρ=1/√n slightly more stable.
+
+F2 (LeadingOnes)
+- Ordering: RLS ≳ (1+1) EA ≳ MMAS ≫ RS
+- One-bit improvements suit RLS; (1+1) EA close; MMAS stable but slower.
+
+F3 (Linear)
+- Ordering: RLS ≈ (1+1) EA ≈ MMAS ≫ RS
+- All converge quickly; RS far behind.
+
+F18 (LABS)
+- Ordering: MMAS(ρ=1/√n or 1/n) ≳ (1+1) EA ≥ RLS ≫ RS
+- MMAS keeps improving where locals plateau.
+
+F23 (N-Queens)
+- Ordering: MMAS ≳ (1+1) EA ≥ RLS ≫ RS
+- MMAS more stable; RLS noisy, often regresses.
+
+F24 (Concatenated Trap)
+- Ordering: MMAS(ρ≤1/√n) > (1+1) EA ≥ RLS ≫ RS
+- MMAS escapes traps; RLS/(1+1)EA stagnate.
+
+F25 (NK-Landscape)
+- Ordering: MMAS ≳ (1+1) EA ≥ RLS ≫ RS
+- MMAS best robustness; exploration advantage on rugged landscape.
+
+---------------------------------------------------------------------
+Cross-Function Takeaways:
+- RS = baseline only.
+- RLS good for smooth functions (F1–F3), weak on deceptive ones.
+- (1+1) EA improves robustness slightly.
+- MMAS best overall; balances speed and exploration.
+
+ρ Parameter:
+- ρ=1 fast but may overfit early.
+- ρ=1/√n or ρ=1/n yields steadier, longer-term gains.
+- Recommended default: ρ=1/√n.
+
+Conclusion:
+MMAS achieves near-optimal performance on easy functions and superior performance on deceptive/rugged ones (F24, F25, F18). RLS and (1+1)EA remain strong baselines but lack global exploration. RS confirms baseline difficulty.

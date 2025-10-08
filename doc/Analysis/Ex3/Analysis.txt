@@ -1,0 +1,14 @@
+
+Across all functions, Random Search performs the worst, confirming that random sampling cannot efficiently exploit fitness feedback. RLS and (1 + 1) EA generally converge fastest on simple unimodal landscapes. The GA is slightly slower in early generations but often reaches equal or higher final fitness due to population diversity and recombination.
+
+For F1-F3, RLS and the (1+1) EA converge to the optimum more rapidly. Although the genetic algorithm (GA) eventually reaches the same optimal solution, it requires a significantly higher number of function evaluations.
+
+For F18, all evolutionary algorithms ultimately achieve comparable fitness levels; however, the genetic algorithm demonstrates a smoother convergence trajectory and greater stability throughout the optimization process.
+
+For F23-F25, the genetic algorithm demonstrates a clear advantage due to its use of crossover and population diversity, achieving higher best-so-far fitness values. This is particularly evident on F24, where GA outperforms all other tested methods.
+
+We implemented a genetic algorithm with uniform crossover and 1/N mutation rate, evaluating its performance under the same evaluation budget as in Exercise 2 across seven pseudo-Boolean optimization functions.
+
+Compared to randomized local search and the (1+1) evolutionary algorithm , our GA demonstrates competitive overall performance: it is slightly slower on F1-F3, performs comparably on F18, F23, and F25, and clearly outperforms both on F24.
+
+These results support the hypothesis that the combination of population diversity and crossover becomes advantageous in deceptive or plateau-rich fitness landscapes, whereas single-individual EAs are more effective on simple unimodal functions.

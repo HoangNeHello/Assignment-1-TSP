@@ -1,2 +1,2 @@
-# Assignment-1-TSP
-Version control for Assignment 1 of Evolutionary Computation
+# COMP SCI 3316/7316 — Evolutionary Computation  
+## Assignment: Pseudo-Boolean Optimization (IOHprofiler)

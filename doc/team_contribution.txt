@@ -1,0 +1,37 @@
+Team Contributions — COMP SCI 3316/7316 (Evolutionary Computation)
+Assignment: Pseudo‑Boolean Optimization (IOHprofiler)
+
+Members
+- Do Nhat Hoang Nguyen (a1905803)
+- Wing Yui Lam “Cynthia” (a1880707)
+- Markus Saam Lardelli (a1860596)
+- Jiaqi Luo “Eileen” (a1900124)
+- Jiahe SHI “Jeff” (a1806696)
+- Kunxin Liu (a1881826)
+
+Exercise‑by‑Exercise Contributions
+• Exercise 1 (IOH basics)
+  - Hoang: Completed (Random Search on F1/F2/F18, IOH logs, fixed‑budget plots).
+
+• Exercise 2 (RLS & (1+1) EA; plus RS baseline)
+  - Cynthia: Implemented RLS; ran n=100, 10 runs, 100k evals on F1, F2, F3, F18, F23, F24, F25; provided plots and per‑function notes.
+  - Markus: Implemented (1+1) EA; same settings and deliverables; contributed per‑function notes.
+  - Hoang: Provided Random Search baseline runs/logs; supported integration and answered the two proof questions.
+  - Note: Cynthia and Markus required extended time to finalize code and analysis; extension was granted in advance.
+
+• Exercise 3 (Genetic Algorithm)
+  - Eileen: Completed GA (uniform crossover, mutation, population ≥ 10); ran full benchmark settings; added curves to Ex2 plots and wrote comparisons.
+
+• Exercise 4 (MMAS & MMAS*)
+  - Hoang: Implemented and ran MMAS with ρ ∈ {1, 1/√n, 1/n}; produced logs and plots.
+  - Kunxin Liu: Implemented and ran MMAS* with same ρ values; produced logs and plots.
+  - Note: Liu was slow on communication until the last days of submission date. However, everything was fine after that.
+
+• Exercise 5 (Your ACO)
+  - Jiahe (Jeff): Completed ACO (≥ 10 ants); ran full benchmark settings; produced plots comparing ACO vs MMAS & MMAS* and wrote the analysis.
+
+Status Summary
+- All exercises completed. All required plots, logs (IOHprofiler), and analyses are included.
+- Timeline note: Work period was ~1 month; Hoang finished assigned parts within ~2 weeks. Some components required additional time due to difficulty and low communication in the middle of the project; final integration was completed close to the deadline (with prior extension).
+
+** Extension: Refer to Extension.png 

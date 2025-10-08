@@ -1,0 +1,26 @@
+This exercise implemented the MMAS and MMAS* algorithms with three evaporation rates ρ ∈ {1, 1/√n, 1/n}, and compared their performance against Random Search, RLS, and (1+1) EA from Exercise 2. 
+All experiments were executed for 100,000 evaluations on the benchmark functions F1, F2, F3, F18, F23, F24, and F25. The fixed-budget plots illustrate the mean and standard deviation of the best-so-far fitness across ten independent runs.
+
+Overall, the results demonstrate that MMAS* significantly outperforms Random Search and RLS on most functions, and achieves comparable or superior performance to (1+1) EA depending on the problem characteristics. 
+Specifically, MMAS* with ρ = 1/n consistently shows the most stable convergence across unimodal and plateau functions, while ρ = 1 leads to faster early improvements but slightly higher variance. 
+The variant ρ = 1/√n typically achieves a balance between convergence speed and stability.
+
+Function F1–F3:
+The three unimodal problems confirm theoretical expectations from Exercise 2. 
+Both RLS and (1+1) EA converge efficiently with O(n log n) evaluations, while MMAS* reaches similar optima after slightly more iterations.
+For F1 and F2, (1+1) EA and MMAS*(ρ=1/n) perform almost identically in late stages, supporting the known efficiency of elitist mutation-based and pheromone-based optimization methods on smooth fitness landscapes.
+
+Function F18, F23, F24:
+These problems exhibit multiple local optima or plateaus. Here, MMAS* clearly outperforms the (1+1) EA and RLS. The pheromone update mechanism allows MMAS* to maintain useful search diversity, preventing premature convergence. 
+Among the variants, MMAS*(ρ=1/√n) and MMAS*(ρ=1/n) show the most consistent progress, as excessive evaporation (ρ=1) causes unstable search behavior in these rugged landscapes.
+
+Function F25:
+This problem is designed to test the ability to escape local optima. The MMAS* variants quickly converge to near-optimal solutions, with ρ=1/n again demonstrating the most stable performance.
+RLS and Random Search fail to improve significantly after early iterations, confirming the advantage of ACO-style probabilistic exploration on non-smooth fitness surfaces.
+
+In conclusion:
+MMAS* provides an effective trade-off between exploration and exploitation through its adaptive pheromone learning mechanism.
+Compared to MMAS, which updates pheromones using the iteration-best solution, MMAS* leverages the best-so-far solution for reinforcement.
+This subtle change enables MMAS* to preserve useful global information and achieve smoother convergence, especially on rugged landscapes.
+Compared to the algorithms in Exercise 2, it exhibits better scalability and robustness across both unimodal and multimodal landscapes.
+The experimental results empirically support the theoretical analyses from Exercise 2, where the expected runtime of mutation-based algorithms on unimodal functions is O(n log n), while ACO-based algorithms extend this efficiency to more complex problem structures through pheromone reinforcement.
