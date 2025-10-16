@@ -1,5 +1,6 @@
 """
 Implementation of the (1+1) EA Algorithm as defined in the Week 3 Lecture
+Modified for Assignment 3
 """
 from ioh import get_problem, ProblemClass
 from ioh import logger
@@ -23,7 +24,7 @@ def OnePlusOneEA(func, budget = None):
     # Run 10 independant trials of the algorithm
     f_opt = None
     sdash_opt = None
-    for i in range(10):
+    for i in range(30):
         f_opt = sys.float_info.min
         sdash_opt = None
 
@@ -56,13 +57,19 @@ def OnePlusOneEA(func, budget = None):
     return f_opt, sdash_opt
 
 # Declaration of problems to be tested.
-om = get_problem(fid = 1, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-lo = get_problem(fid = 2, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-prob3 = get_problem(fid = 3, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-labs = get_problem(fid = 18, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-prob23 = get_problem(fid = 23, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-prob24 = get_problem(fid = 24, dimension=100, instance=1, problem_class = ProblemClass.PBO)
-prob25 = get_problem(fid = 25, dimension=100, instance=1, problem_class = ProblemClass.PBO)
+maxCov2100 = get_problem(fid = 2100, problem_class = ProblemClass.GRAPH)
+maxCov2101 = get_problem(fid = 2101, problem_class = ProblemClass.GRAPH)
+maxCov2102 = get_problem(fid = 2102, problem_class = ProblemClass.GRAPH)
+maxCov2103 = get_problem(fid = 2103, problem_class = ProblemClass.GRAPH)
+
+maxInf2200 = get_problem(fid = 2200, problem_class = ProblemClass.GRAPH)
+maxInf2201 = get_problem(fid = 2201, problem_class = ProblemClass.GRAPH)
+maxInf2202 = get_problem(fid = 2202, problem_class = ProblemClass.GRAPH)
+maxInf2203 = get_problem(fid = 2203, problem_class = ProblemClass.GRAPH)
+
+pwc2300 = get_problem(fid = 2300, problem_class = ProblemClass.GRAPH)
+pwc2301 = get_problem(fid = 2301, problem_class = ProblemClass.GRAPH)
+pwc2302 = get_problem(fid = 2302, problem_class = ProblemClass.GRAPH)
 
 # Create default logger compatible with IOHanalyzer
 # `root` indicates where the output files are stored.
@@ -73,26 +80,30 @@ log = logger.Analyzer(root="data",
     algorithm_info="Implementation of the (1+1) EA in Python")
 
 
-om.attach_logger(log)
-OnePlusOneEA(om, 100000)
+maxCov2100.attach_logger(log)
+OnePlusOneEA(maxCov2100, 10000)
+maxCov2101.attach_logger(log)
+OnePlusOneEA(maxCov2101, 10000)
+maxCov2102.attach_logger(log)
+OnePlusOneEA(maxCov2102, 10000)
+maxCov2103.attach_logger(log)
+OnePlusOneEA(maxCov2103, 10000)
 
-lo.attach_logger(log)
-OnePlusOneEA(lo, 100000)
+maxInf2200.attach_logger(log)
+OnePlusOneEA(maxInf2200, 10000)
+maxInf2201.attach_logger(log)
+OnePlusOneEA(maxInf2201, 10000)
+maxInf2202.attach_logger(log)
+OnePlusOneEA(maxInf2202, 10000)
+maxInf2203.attach_logger(log)
+OnePlusOneEA(maxInf2203, 10000)
 
-prob3.attach_logger(log)
-OnePlusOneEA(prob3, 100000)
-
-labs.attach_logger(log)
-OnePlusOneEA(labs, 100000)
-
-prob23.attach_logger(log)
-OnePlusOneEA(prob23, 100000)
-
-prob24.attach_logger(log)
-OnePlusOneEA(prob24, 100000)
-
-prob25.attach_logger(log)
-OnePlusOneEA(prob25, 100000)
+pwc2300.attach_logger(log)
+OnePlusOneEA(pwc2300, 10000)
+pwc2301.attach_logger(log)
+OnePlusOneEA(pwc2301, 10000)
+pwc2302.attach_logger(log)
+OnePlusOneEA(pwc2302, 10000)
 
 # This statemenet is necessary in case data is not flushed yet.
 del log
