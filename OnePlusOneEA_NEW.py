@@ -21,7 +21,7 @@ def OnePlusOneEA(func, budget = None):
         optimum = func.optimum.y
     print(optimum)
 
-    # Run 10 independant trials of the algorithm
+    # Run 30 independant trials of the algorithm
     f_opt = None
     sdash_opt = None
     for i in range(30):
@@ -75,7 +75,7 @@ pwc2302 = get_problem(fid = 2302, problem_class = ProblemClass.GRAPH)
 # `root` indicates where the output files are stored.
 # `folder_name` is the name of the folder containing all output. You should compress this folder and upload it to IOHanalyzer
 log = logger.Analyzer(root="data", 
-    folder_name="OnePlusOneEA_run", 
+    folder_name="EX1_OnePlusOneEA_run", 
     algorithm_name="OnePlusOneEA", 
     algorithm_info="Implementation of the (1+1) EA in Python")
 
