@@ -9,7 +9,7 @@ import sys
 import numpy as np
 import random
 
-def RLS(func, budget = 100000, runs=30):
+def RLS(func, budget = None):
     # budget for each run (number of iterations) = 100,000
     # set a default if budget isn't given, in this case 50n^2 (same as random_search function)
     if budget is None:
