@@ -151,7 +151,7 @@ def ioh_fitness_wrapper(fid: int, n: int, iid: int = 1):
     - logger_factory(out_root, algo_name) -> attached logger
     """
     assert _HAS_IOH, "ioh is not installed"
-    problem = get_problem(fid, iid, n, ProblemClass.PBO)  
+    problem = get_problem(fid, iid, n, ProblemClass.GRAPH)  
     maximize = True 
 
     def fitness(x: Bitstring) -> float:
@@ -166,15 +166,15 @@ def ioh_fitness_wrapper(fid: int, n: int, iid: int = 1):
     return fitness, problem, maximize, make_logger
 
 
-def run_ex3_ga_with_ioh(
+def run_ex1_ga_with_ioh(
     algo_name: str = "GA_uniform_1overN",
-    fids = (1, 2, 3, 18, 23, 24, 25),
+    fids = (2100,2101,2102,2103, 2200,2201,2202,2203, 2300,2301,2302),
     n: int = 100,
     iid: int = 1,
-    runs: int = 10,
+    runs: int = 30,
     eval_budget: int = 100_000,
-    out_root: str = "final/doc/ex2_ex3_plots",
-    folder_prefix: str = "ex3_ga"
+    out_root: str = "final/doc/Ex1_plots",
+    folder_prefix: str = "Own_ga"
 ):
     """
     Run GA on the specified PBO functions with IOHexperimenter logging.
@@ -221,6 +221,58 @@ def _demo_local():
     print("Best f:", res.best_fitness, "after evals:", res.evaluations, "gens:", res.generations)
 
 
+
+def ioh_graph_wrapper(instance_id,int):
+    assert _HAS_IOH, "ioh is not installed"
+    problem = get_problem(instance_id,problem_class=ProblemClass.GRAPH)
+    maximize = True
+
+    def fitness(x: Bitstring) -> float:
+        return problem(x)
+    
+    def make_logger(root: str, folder: str, algo_name: str):
+        lg = ioh_logger.Analyzer(root=root, folder_name=folder, algorithm_name=algo_name, store_positions=False)
+        problem.attach_logger(lg)
+        return lg
+    return fitness, problem, maximize, make_logger
+
+def run_ex1_ga_with_ioh_graph(
+    algo_name: str = "GA_uniform_loverN",
+    instances = (2100,2101,2102,2103, 2200,2201,2202,2203, 2300,2301,2302),
+    runs: int = 30,
+    eval_budget: int = 10_000,
+    out_root: str = "final/doc/EX1_plots",
+    folder_prefix: str = "ex1_ga"
+):
+    
+    folder = f"{folder_prefix}-{algo_name}"
+
+    for instance in instances:
+        
+        fitness, problem, maximize, make_logger = ioh_graph_wrapper(instance)
+        
+        n = problem.meta_data.n_variables
+
+        for run in range(1, runs + 1):
+            seed = run
+            rng = random.Random(seed)
+            lg = make_logger(out_root, folder, f"{algo_name}_I{instance}")
+           
+            problem.reset()
+
+            
+            params = GAParams(mu=20, lambd=20, pc=0.9, pm_mode="1/n", seed=seed, tournament_k=3)
+            ga = GA(n=problem.n_variables, fitness=fitness, params=params, maximize=maximize)
+            
+            _ = ga.run(eval_budget=eval_budget)
+
+            
+            problem.detach_logger()
+            try:
+                lg.close()  
+            except Exception:
+                pass    
+    print('finish')
 if __name__ == "__main__":
-   
-    _demo_local()
+    
+    run_ex1_ga_with_ioh()
