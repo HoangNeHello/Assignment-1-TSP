@@ -74,37 +74,37 @@ log = logger.Analyzer(root="data",
 
 
 problem_2100.attach_logger(log)
-RLS(problem_2100, 100000)
+RLS(problem_2100, 10000)
 
 problem_2101.attach_logger(log)
-RLS(problem_2101, 100000)
+RLS(problem_2101, 10000)
 
 problem_2102.attach_logger(log)
-RLS(problem_2102, 100000)
+RLS(problem_2102, 10000)
 
 problem_2103.attach_logger(log)
-RLS(problem_2103, 100000)
+RLS(problem_2103, 10000)
 
 problem_2200.attach_logger(log)
-RLS(problem_2200, 100000)
+RLS(problem_2200, 10000)
 
 problem_2201.attach_logger(log)
-RLS(problem_2201, 100000)
+RLS(problem_2201, 10000)
 
 problem_2202.attach_logger(log)
-RLS(problem_2202, 100000)
+RLS(problem_2202, 10000)
 
 problem_2203.attach_logger(log)
-RLS(problem_2203, 100000)
+RLS(problem_2203, 10000)
 
 problem_2300.attach_logger(log)
-RLS(problem_2300, 100000)
+RLS(problem_2300, 10000)
 
 problem_2301.attach_logger(log)
-RLS(problem_2301, 100000)
+RLS(problem_2301, 10000)
 
 problem_2302.attach_logger(log)
-RLS(problem_2302, 100000)
+RLS(problem_2302, 10000)
 
 # This statemenet is necessary in case data is not flushed yet.
 del log
