@@ -1,13 +1,12 @@
 """
 Implementation of the RLS Algorithm as defined in the Week 3 Lecture
-Reimplementation of RLS.py based on RLS.py
-Modified for Assignment 3
+Reimplementation of RLS.py based on OnePlusOneEA.py
 """
 from ioh import get_problem, ProblemClass
 from ioh import logger
+import ioh
 import sys
 import numpy as np
-
 import random
 
 def RLS(func, budget = None):
@@ -52,53 +51,60 @@ def RLS(func, budget = None):
     return f_opt, sdash_opt
 
 # Declaration of problems to be tested.
-maxCov2100 = get_problem(fid = 2100, problem_class = ProblemClass.GRAPH)
-maxCov2101 = get_problem(fid = 2101, problem_class = ProblemClass.GRAPH)
-maxCov2102 = get_problem(fid = 2102, problem_class = ProblemClass.GRAPH)
-maxCov2103 = get_problem(fid = 2103, problem_class = ProblemClass.GRAPH)
+problem_2100 = ioh.get_problem(2100, problem_class=ioh.ProblemClass.GRAPH)
+problem_2101 = ioh.get_problem(2101, problem_class=ioh.ProblemClass.GRAPH)
+problem_2102 = ioh.get_problem(2102, problem_class=ioh.ProblemClass.GRAPH)
+problem_2103 = ioh.get_problem(2103, problem_class=ioh.ProblemClass.GRAPH)
+problem_2200 = ioh.get_problem(2200, problem_class=ioh.ProblemClass.GRAPH)
+problem_2201 = ioh.get_problem(2201, problem_class=ioh.ProblemClass.GRAPH)
+problem_2202 = ioh.get_problem(2202, problem_class=ioh.ProblemClass.GRAPH)
+problem_2203 = ioh.get_problem(2203, problem_class=ioh.ProblemClass.GRAPH)
+problem_2300 = ioh.get_problem(2300, problem_class=ioh.ProblemClass.GRAPH)
+problem_2301 = ioh.get_problem(2301, problem_class=ioh.ProblemClass.GRAPH)
+problem_2302 = ioh.get_problem(2302, problem_class=ioh.ProblemClass.GRAPH)
 
-maxInf2200 = get_problem(fid = 2200, problem_class = ProblemClass.GRAPH)
-maxInf2201 = get_problem(fid = 2201, problem_class = ProblemClass.GRAPH)
-maxInf2202 = get_problem(fid = 2202, problem_class = ProblemClass.GRAPH)
-maxInf2203 = get_problem(fid = 2203, problem_class = ProblemClass.GRAPH)
-
-pwc2300 = get_problem(fid = 2300, problem_class = ProblemClass.GRAPH)
-pwc2301 = get_problem(fid = 2301, problem_class = ProblemClass.GRAPH)
-pwc2302 = get_problem(fid = 2302, problem_class = ProblemClass.GRAPH)
 
 # Create default logger compatible with IOHanalyzer
 # `root` indicates where the output files are stored.
 # `folder_name` is the name of the folder containing all output. You should compress this folder and upload it to IOHanalyzer
 log = logger.Analyzer(root="data", 
-    folder_name="EX1_RLS_run", 
+    folder_name="RLS_run", 
     algorithm_name="RLS", 
-    algorithm_info="Implementation of the (1+1) EA in Python")
+    algorithm_info="Implementation of the RLS algorithm in Python")
 
 
-maxCov2100.attach_logger(log)
-RLS(maxCov2100, 10000)
-maxCov2101.attach_logger(log)
-RLS(maxCov2101, 10000)
-maxCov2102.attach_logger(log)
-RLS(maxCov2102, 10000)
-maxCov2103.attach_logger(log)
-RLS(maxCov2103, 10000)
+problem_2100.attach_logger(log)
+RLS(problem_2100, 100000)
 
-maxInf2200.attach_logger(log)
-RLS(maxInf2200, 10000)
-maxInf2201.attach_logger(log)
-RLS(maxInf2201, 10000)
-maxInf2202.attach_logger(log)
-RLS(maxInf2202, 10000)
-maxInf2203.attach_logger(log)
-RLS(maxInf2203, 10000)
+problem_2101.attach_logger(log)
+RLS(problem_2101, 100000)
 
-pwc2300.attach_logger(log)
-RLS(pwc2300, 10000)
-pwc2301.attach_logger(log)
-RLS(pwc2301, 10000)
-pwc2302.attach_logger(log)
-RLS(pwc2302, 10000)
+problem_2102.attach_logger(log)
+RLS(problem_2102, 100000)
+
+problem_2103.attach_logger(log)
+RLS(problem_2103, 100000)
+
+problem_2200.attach_logger(log)
+RLS(problem_2200, 100000)
+
+problem_2201.attach_logger(log)
+RLS(problem_2201, 100000)
+
+problem_2202.attach_logger(log)
+RLS(problem_2202, 100000)
+
+problem_2203.attach_logger(log)
+RLS(problem_2203, 100000)
+
+problem_2300.attach_logger(log)
+RLS(problem_2300, 100000)
+
+problem_2301.attach_logger(log)
+RLS(problem_2301, 100000)
+
+problem_2302.attach_logger(log)
+RLS(problem_2302, 100000)
 
 # This statemenet is necessary in case data is not flushed yet.
 del log
