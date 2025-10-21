@@ -10,7 +10,7 @@ def soea(func, runs: int = 30, budget: int | None = None,
     """
     func: IOH problem (GRAPH)
     runs: independent runs (30 for the assignment)
-    budget: evaluations per run (10_000 for Ex1/2/3; 100_000 for Ex4)
+    budget: evaluations per run (100_000 for Ex4)
     mu, lam: population and offspring sizes
     pc: crossover prob (uniform crossover)
     pm: mutation prob (default 1/n)
@@ -18,7 +18,7 @@ def soea(func, runs: int = 30, budget: int | None = None,
     """
     n = func.meta_data.n_variables
     if budget is None:
-        budget = 10_000
+        budget = 100_000
     if pm is None:
         pm = 1.0 / n
     k = max(1, int(round(k_frac * n)))
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     for fid in GRAPH_IDS:
         prob = get_problem(fid=fid, problem_class=ProblemClass.GRAPH)
         prob.attach_logger(l)
-        soea(prob, runs=30, budget=10_000, mu=10, lam=10, pc=0.9, pm=None,
+        soea(prob, runs=30, budget=100_000, mu=10, lam=10, pc=0.9, pm=None,
              seed=0, exact_k=False, k_frac=0.2)
         # NOTE: soea() calls prob.reset() after each run (as in the example)
 
