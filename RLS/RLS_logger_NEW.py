@@ -68,7 +68,7 @@ problem_2302 = ioh.get_problem(2302, problem_class=ioh.ProblemClass.GRAPH)
 # `root` indicates where the output files are stored.
 # `folder_name` is the name of the folder containing all output. You should compress this folder and upload it to IOHanalyzer
 log = logger.Analyzer(root="data", 
-    folder_name="RLS_run", 
+    folder_name="EX1_RLS_run", 
     algorithm_name="RLS", 
     algorithm_info="Implementation of the RLS algorithm in Python")
 
