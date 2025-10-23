@@ -1,0 +1,19 @@
+# MOEA-20.py
+from ioh import get_problem, ProblemClass, logger
+from moea_core import run_moea_graph
+
+GRAPH_IDS = [2100,2101,2102,2103,2200,2201,2202,2203]
+
+if __name__ == "__main__":
+    l = logger.Analyzer(
+        root="MOEA_results_20",
+        algorithm_name="MOEA-20",
+        algorithm_info="NSGA-II-lite; pop=20; runs=30; budget=10000; pc=0.9; pm=1/n; 2nd=min_size"
+    )
+    for fid in GRAPH_IDS:
+        prob = get_problem(fid=fid, problem_class=ProblemClass.GRAPH)
+        prob.attach_logger(l)
+        run_moea_graph(prob, runs=30, budget=10_000, pop_size=20,
+                       pc=0.9, pm=None, seed=0,
+                       exact_k=False, k_frac=0.2, second="min_size")
+    del l
