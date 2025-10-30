@@ -1,44 +1,39 @@
+#!/usr/bin/env python3
+import random
+import numpy as np
 import ioh
-import csv
-from GSEMO import gsemo
+from ioh import logger
+from GSEMO import gsemo  # expected: gsemo(problem, budget) -> (best_solution, trace)
 
-def run_experiments(problem_ids, budget=10000, runs=30, out_file="results.csv"):
-    results = []
-
+def run_experiments(problem_ids, budget=10_000, runs=30):
     for pid in problem_ids:
+        L = logger.Analyzer(
+            root="GSEMO_logs",
+            folder_name=f"GSEMO_id{pid}",
+            algorithm_name="GSEMO",
+            algorithm_info=f"budget={budget}; runs={runs}"
+        )
+        # Add per-eval trigger later if stable: L.add_trigger(logger.trigger.Each(1))
+
         problem = ioh.get_problem(pid, problem_class=ioh.ProblemClass.GRAPH)
-
-        for r in range(runs):
-            iohgsemolog = ioh.logger.Analyzer(
-                root="data",
-                folder_name="GSEMO_run",
-                algorithm_name="GSEMO",
-                algorithm_info=f"run_{r}"
-            )
-            problem.attach_logger(iohgsemolog)
-
-            problem.reset()
-            _, log_gsemo = gsemo(problem, budget)
-
-            for evals, best in log_gsemo:
-                results.append([pid, r, "GSEMO", evals, best])
-
-            problem.detach_logger()
-            del iohgsemolog
-
-        print(f"complete Problem {pid} 's {runs} times run")
-
-    with open(out_file, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["problem_id", "run", "algorithm", "evaluations", "best_f1"])
-        writer.writerows(results)
-
-    print(f"all data save in to {out_file}")
-
+        try:
+            problem.attach_logger(L)
+            for r in range(runs):
+                # seed external RNGs so each run is independent
+                random.seed(r)
+                np.random.seed(r)
+                problem.reset()
+                _best, _trace = gsemo(problem, budget=budget)  # no seed kwarg
+            print(f"Completed problem {pid} for {runs} runs")
+        finally:
+            try: problem.detach_logger()
+            except Exception: pass
+            del L  # flush files
 
 if __name__ == "__main__":
-    problem_ids = [2100, 2101, 2102, 2103,
-                    2200, 2201, 2202, 2203,
-                    2300, 2301, 2302]
-
-run_experiments(problem_ids, budget=10000, runs=30, out_file="E2_results.csv")
+    problem_ids = [
+        2100, 2101, 2102, 2103,  # MaxCoverage
+        2200, 2201, 2202, 2203,  # MaxInfluence
+        2300, 2301, 2302         # PackWhileTravel (for Ex2 third bullet)
+    ]
+    run_experiments(problem_ids, budget=10_000, runs=30)
