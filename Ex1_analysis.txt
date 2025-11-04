@@ -1,0 +1,42 @@
+ANALYSIS & COMPARISON (30 runs, 10,000 evals)
+
+Algorithms compared: RLS, (1+1) EA, and SOEA with μ ∈ {10, 20, 50} on MaxCoverage (2100–2103), MaxInfluence (2200–2203), and PackWhileTravel (2300–2302). Metrics: fixed-budget best-so-far (mean ± sd).
+
+1) Overall ranking at 10,000 evaluations
+- SOEA (μ=20) most often yields the best final mean fitness with moderate variance.
+- SOEA (μ=50) ties or wins on a few instances but starts slower and can show higher variance.
+- SOEA (μ=10) is the fastest starter but is typically overtaken by μ=20 in the second half of the budget.
+- (1+1) EA consistently beats RLS and is competitive early; less often the best at the end.
+- RLS is the most stable (lowest variance) but usually underperforms in final mean.
+
+Takeaway: If one setting must be chosen for 10k evals, SOEA (μ=20) is the best default.
+
+2) Early vs. late budget (anytime performance)
+- 0–2k evals: SOEA(μ=10) and (1+1) EA climb fastest; RLS is steady but slow.
+- 2k–10k evals: SOEA(μ=20) delivers the most consistent continued improvement. SOEA(μ=50) improves, but the large population can dilute selection pressure within a tight budget.
+
+3) Variance & robustness (error bars)
+- RLS: smallest standard deviation; very predictable progression.
+- (1+1) EA: low-to-moderate variance; mutation-only hill-climbing is robust.
+- SOEA: variance increases with μ because crossover can amplify both good and poor building blocks. μ=20 balances exploration/exploitation best; μ=50 has the largest spread on several instances.
+
+4) Per-family observations
+MaxCoverage (2100–2103):
+- Monotone submodular with a cardinality constraint rewards recombination.
+- Final-mean ordering: SOEA(20) > SOEA(10) ≈ (1+1) EA > RLS. μ=50 helps only on some fragmented instances.
+
+MaxInfluence (2200–2203):
+- Diminishing returns favor diverse seed sets; recombination is valuable.
+- SOEA(20) leads on final mean; (1+1) EA and SOEA(10) are strong early but fade later. Variance increases with μ.
+
+PackWhileTravel (2300–2302):
+- Mixed packing/coverage with more plateauing.
+- (1+1) EA is relatively stronger here, sometimes rivaling SOEA(10). SOEA(20) still usually wins on final mean, but margins narrow; μ=50 rarely pays off at 10k.
+
+5) Mechanistic interpretation
+- RLS: single-bit local search → low exploration, strong local exploitation, minimal variance.
+- (1+1) EA: adds multi-bit flips → escapes local traps better than RLS with small overhead.
+- SOEA: diversity + crossover combine complementary partial solutions (e.g., different coverage sets). Too small μ → premature convergence; too large μ → weak selection signal per evaluation.
+
+Note:
+Across 30-run, 10k-evaluation budgets on MaxCoverage, MaxInfluence, and PackWhileTravel, SOEA with μ=20 consistently achieves the best final mean performance with acceptable variance, balancing diversity and selection pressure. SOEA(μ=10) and (1+1) EA show faster early progress but are typically overtaken mid-budget; μ=50 improves in a few rugged cases but more often underutilizes the budget. RLS is the most stable but least competitive. Results suggest SOEA(μ=20) as the default single-objective optimizer, with (1+1) EA a strong secondary when reproducibility and low variance are priorities.
