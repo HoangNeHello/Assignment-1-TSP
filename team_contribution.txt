@@ -1,0 +1,27 @@
+TEAM CONTRIBUTIONs
+
+Kunxin Liu (a1881826) — MOEA Owner
+- Designs & implements MOEA (μ = 10/20/50)
+
+Jiaqi Luo — Eileen (a1900124) — Uniform Crossover Owner
+- Owns the uniform crossover (UCX).
+
+Markus Saam Lardelli (a1860596)
+- Implements and maintains the (1+1) EA baseline.
+- The team had run code earlier but **instance IDs were mismatched**; Markus **reran all affected algorithms himself** with correct IDs.
+- Helps with long-budget result logs running.
+
+Do Nhat Hoang Nguyen — Hoang (a1905803)
+- Designs & implements SOEA (μ = 10/20/50); coordinates repository hygiene.
+- Executes remaining experiments across instances to close gaps.
+- Produces fixed-budget plots (mean ± sd) and trade-off figures; consolidates final analysis and write-up.
+
+Jiahe SHI — Jeff (a1808696)
+- Owns the GSEMO, and finish all the Ex2.
+
+Wing Yui Lam — Cynthia (a1880707)
+- RLS baseline owner
+
+Team's problems: Member Eileen, Jiahe, and Liu can run the code, but their computers generate wrong IDs (increase the last digit of all IDs by 1)
+Markus, Cynthia, and Hoang are the ones that can run correctly.
+Eileen, Cynthia, Jiahe, and Liu hardly use the git repository because of their unfamiliarity.
